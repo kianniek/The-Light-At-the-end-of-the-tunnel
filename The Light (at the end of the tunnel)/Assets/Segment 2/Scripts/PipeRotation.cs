@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class RotatingPipe : MonoBehaviour
+public class PipeRotation : MonoBehaviour
 {
     public LevelTrigger trigger;
     public bool playerDead = false;
