@@ -7427,7 +7427,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 523
+  m_VersionIndex: 811
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11210,7 +11210,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 587
+  m_VersionIndex: 875
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -11323,6 +11323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad39e8242f89324babb4a80ad022d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particles: {fileID: 0}
-  collider: {fileID: 0}
-  Active: 0
+  particles: {fileID: 8468034815557825564}
+  collider: {fileID: 8669194007259415052}
+  Active: 1

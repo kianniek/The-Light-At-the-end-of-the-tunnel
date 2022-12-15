@@ -22,8 +22,8 @@ public class PushActivator : MonoBehaviour
             collider.SetActive(true);
         }else if (!Active)
         {
-            particles.SetActive(true);
-            collider.SetActive(true);
+            particles.SetActive(false);
+            collider.SetActive(false);
         }
     }
 
