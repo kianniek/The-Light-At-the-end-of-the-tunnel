@@ -33,7 +33,6 @@ public class PlattformHandler : MonoBehaviour
     void Update()
     {
         HandlePlattforms();
-        Debug.Log(jumpCount);
     }
 
     private void HandlePlattforms()
