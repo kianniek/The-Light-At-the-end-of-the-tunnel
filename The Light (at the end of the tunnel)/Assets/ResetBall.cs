@@ -8,13 +8,37 @@ public class ResetBall : MonoBehaviour
 
     public PathFollow path;
 
+    private bool hitWater;
+
+    //Resetting ball
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Water"))
+        if (!hitWater)
         {
-            path.current = 0;
+            if (other.gameObject.CompareTag("Water"))
+            {
+                Invoke("BallResetter", 3f);
 
-            transform.position = resetPosition;
+                hitWater = true;
+            }
         }
+    }
+
+    //Reset player position
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.position = WaterCollision.resetPosition;
+        }
+    }
+
+    private void BallResetter()
+    {
+        hitWater = false;
+
+        path.current = 0;
+
+        transform.position = resetPosition;
     }
 }
