@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using TreeEditor;
@@ -20,6 +20,10 @@ public class PlatformRaycast : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+   //     CheckForPlatform();
+    }
+    private void FixedUpdate()
     {
         CheckForPlatform();
     }
