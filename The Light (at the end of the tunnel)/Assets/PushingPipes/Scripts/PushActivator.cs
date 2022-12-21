@@ -6,7 +6,7 @@ public class PushActivator : MonoBehaviour
 {
     [SerializeField] GameObject particles;
     [SerializeField] GameObject collider;
-    [SerializeField] bool Active;
+    [SerializeField] public bool Active;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,10 +25,5 @@ public class PushActivator : MonoBehaviour
             particles.SetActive(false);
             collider.SetActive(false);
         }
-    }
-
-    IEnumerator ActiveOverTime()
-    {
-       //yield return WaitForSeconds(10);
     }
 }
