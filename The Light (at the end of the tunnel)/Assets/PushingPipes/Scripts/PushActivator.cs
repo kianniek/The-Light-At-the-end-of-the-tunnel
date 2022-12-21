@@ -27,8 +27,8 @@ public class PushActivator : MonoBehaviour
         }
     }
 
-    //IEnumerator ActiveOverTime()
-    //{
-    //    return WaitForSeconds(10)
-    //}
+    IEnumerator ActiveOverTime()
+    {
+       //yield return WaitForSeconds(10);
+    }
 }
