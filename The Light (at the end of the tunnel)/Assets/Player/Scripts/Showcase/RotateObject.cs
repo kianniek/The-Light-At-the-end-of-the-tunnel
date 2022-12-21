@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//This simple script continually rotates the gameobject it is attached to around a chosen axis;
-//It is used in the 'ExternalCameraScene' to demonstrate a camera setup where camera and character are separate gameobjects;
 public class RotateObject : MonoBehaviour
 {
     Transform tr;
     //Speed of rotation;
     public float rotationSpeed = 20f;
     //Axis used for rotation;
-    public Vector3 rotationAxis = new Vector3(0f, 1f, 0f);
+    public Rotation rotationAxis;
+    public RotationType rotationType;
 
+    public enum Rotation
+    {
+        Up,
+        Right,
+        Forward
+    }
+    public enum RotationType
+    {
+        Local,
+        World
+    }
     //Start;
     void Start()
     {
@@ -22,7 +32,46 @@ public class RotateObject : MonoBehaviour
     //Update;
     void Update()
     {
-        //Rotate object;
-        tr.Rotate(rotationAxis * rotationSpeed * Time.deltaTime);
+        switch (rotationType)
+        {
+            case RotationType.Local:
+                switch (rotationAxis)
+                {
+                    case Rotation.Up:
+                        tr.Rotate(rotationSpeed * tr.up);
+                        break;
+                    case Rotation.Right:
+                        tr.Rotate(rotationSpeed * tr.right);
+                        break;
+                    case Rotation.Forward:
+                        tr.Rotate(rotationSpeed * tr.forward);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case RotationType.World:
+                switch (rotationAxis)
+                {
+                    case Rotation.Up:
+                        tr.Rotate(rotationSpeed * Vector3.up);
+                        break;
+                    case Rotation.Right:
+                        tr.Rotate(rotationSpeed * Vector3.right);
+
+                        break;
+                    case Rotation.Forward:
+                        
+                        tr.Rotate(rotationSpeed * Vector3.forward);
+
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
+        
     }
 }

@@ -6,9 +6,9 @@ using Unity.VisualScripting;
 public class RotatingPlatform : MonoBehaviour
 {
     //References to attached components;
-    [SerializeField] Rigidbody r;
-    [SerializeField] TriggerArea triggerArea;
-    [SerializeField] Vector3 rotationAmount = Vector3.zero;
+    Rigidbody r;
+    TriggerArea triggerArea;
+     Vector3 rotationAmount = Vector3.zero;
 
     //Start;
     void Awake()
@@ -37,8 +37,6 @@ public class RotatingPlatform : MonoBehaviour
 
         for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
         {
-            //triggerArea.rigidbodiesInTriggerArea[i].MoveRotation(triggerArea.rigidbodiesInTriggerArea[i].rotation * Quaternion.Euler(0, rotationHandler.rotation * rotationHandlerrotationSpeed, 0));
-
             Vector3 offsetRot = r.rotation.eulerAngles - rotationAmount;
             Vector3 moveVector = RotatePointAroundPivot(triggerArea.rigidbodiesInTriggerArea[i].transform.position, transform.position, offsetRot);
             triggerArea.rigidbodiesInTriggerArea[i].MovePosition(moveVector);
