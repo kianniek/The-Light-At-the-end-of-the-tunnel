@@ -7,14 +7,16 @@ public class PipeRotation : MonoBehaviour
 {
     public LevelTrigger trigger;
     public bool playerDead = false;
+    public bool reverseSegmentActive = false;
 
-    [SerializeField] float rpm;
+    public float rpm;
     [SerializeField] float accelerationTime;
     [SerializeField] Vector3 offsetRotation;
 
     private float rotationSpeed;
     private float currentAcceleration;
     private Vector3 currentRotation;
+    private bool reachedZero = false;
 
 
     // Start is called before the first frame update
@@ -27,7 +29,10 @@ public class PipeRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotatePipe();
+        if (!reverseSegmentActive)
+            RotatePipe();
+        else
+            ReverseRotatePipe();
     }
 
     public void RotatePipe()
@@ -58,6 +63,42 @@ public class PipeRotation : MonoBehaviour
             }
 
             currentRotation = new Vector3(currentRotation.x + (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
+            transform.rotation = Quaternion.Euler(currentRotation);
+        }
+    }
+
+    public void ReverseRotatePipe()
+    {
+        if (trigger.levelActive)
+        {
+            if (!playerDead && reachedZero)
+            {
+                if (currentAcceleration < 1)
+                {
+                    currentAcceleration += Time.deltaTime / accelerationTime;
+                }
+                if (currentAcceleration > 1)
+                {
+                    currentAcceleration = 1;
+                }
+            }
+            else
+            {
+                if (currentAcceleration > 0)
+                {
+                    currentAcceleration -= Time.deltaTime / accelerationTime;
+                }
+                if (currentAcceleration < 0)
+                {
+                    currentAcceleration = 0;
+                    reachedZero = true;
+                }
+            }
+
+            if (reachedZero)
+                currentRotation = new Vector3(currentRotation.x - (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
+            else
+                currentRotation = new Vector3(currentRotation.x + (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
             transform.rotation = Quaternion.Euler(currentRotation);
         }
     }
