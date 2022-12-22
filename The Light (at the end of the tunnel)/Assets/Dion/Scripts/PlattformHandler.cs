@@ -10,6 +10,10 @@ public class PlattformHandler : MonoBehaviour
     public MovementController movementPlayer;
     public Mover player;
 
+    public WaterCollision water;
+
+    public CheckpointHandler[] checkpoints;
+
     private bool red;
     private bool blue;
 
@@ -33,12 +37,15 @@ public class PlattformHandler : MonoBehaviour
     void Update()
     {
         HandlePlattforms();
+        //SetPlattformOffAtCheckpoint();
+
+        Debug.Log(checkpoints[0].hitCheckpoint);
     }
 
     private void HandlePlattforms()
     {
         //Blue on
-        if (jumpCount == 0 && movementPlayer.jumpKeyWasPressed && player.isGrounded)
+        if ((jumpCount == 0 && movementPlayer.jumpKeyWasPressed && player.isGrounded))
         {
             Invoke("BlueActive", 0.5f);
         }
@@ -48,12 +55,26 @@ public class PlattformHandler : MonoBehaviour
             Invoke("RedActive", 0.5f);
         }
         //Reset
-        else if (red && blue)
+        else if ((red && blue))
         {
-            jumpCount = 0;
+            ResetCounter();
+        }
+        //Sets the red active if the player dies at the first part
+        else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint) && water.hitWater)
+        {
+            RedActive();
 
-            red = false;
-            blue = false;
+            checkpoints[0].hitCheckpoint = false;
+            checkpoints[2].hitCheckpoint = false;
+
+            blue = true;
+        }
+        //Sets the blue active if the player dies at the second part
+        else if (checkpoints[1].hitCheckpoint && water.hitWater)
+        {
+            checkpoints[1].hitCheckpoint = false;
+
+            BlueActive();
         }
     }
 
@@ -90,4 +111,20 @@ public class PlattformHandler : MonoBehaviour
             bluePlattforms[b].SetActive(false);
         }
     }
+
+    private void ResetCounter()
+    {
+        jumpCount = 0;
+
+        red = false;
+        blue = false;
+    }
+
+    //private void SetPlattformOffAtCheckpoint()
+    //{
+    //    if (checkpoints[0].hitCheckpoint && water.hitWater)
+    //    {
+    //        RedActive();    
+    //    }
+    //}
 }

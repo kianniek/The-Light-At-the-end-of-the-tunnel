@@ -1013,6 +1013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f1054eb0f03149b8221204cbd6867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCheckpoint: 0
 --- !u!1 &150817163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,7 +1355,7 @@ GameObject:
   - component: {fileID: 189751714}
   - component: {fileID: 189751713}
   m_Layer: 0
-  m_Name: CheckHit (1)
+  m_Name: CheckHit (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1400,6 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f1054eb0f03149b8221204cbd6867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCheckpoint: 0
 --- !u!1001 &200092853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2965,6 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f1054eb0f03149b8221204cbd6867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCheckpoint: 0
 --- !u!1001 &533451927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39585,6 +39588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f1054eb0f03149b8221204cbd6867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCheckpoint: 0
 --- !u!1 &1440018580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8180563558759276614, guid: f10b7cd7f3429cc4c87286248f782e73, type: 3}
@@ -40224,7 +40228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4948304561748322, guid: 02db1269cd824a742a44596330eb0f28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.3
+      value: 102.5
       objectReference: {fileID: 0}
     - target: {fileID: 4948304561748322, guid: 02db1269cd824a742a44596330eb0f28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40492,6 +40496,11 @@ MonoBehaviour:
   - {fileID: 615357254}
   movementPlayer: {fileID: 1111781230}
   player: {fileID: 1111781236}
+  water: {fileID: 1646882648}
+  checkpoints:
+  - {fileID: 1424023132}
+  - {fileID: 146547809}
+  - {fileID: 189751714}
 --- !u!4 &1591121835
 Transform:
   m_ObjectHideFlags: 0
@@ -41054,6 +41063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18e305fb97474044b11dff898a3f73c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitWater: 0
 --- !u!1 &1651850974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4584483360470845625, guid: ebfd49a07c289034ca80b3885e3e5353, type: 3}

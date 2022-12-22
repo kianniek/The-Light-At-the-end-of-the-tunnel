@@ -21,4 +21,9 @@ public class LevelTrigger : MonoBehaviour
     {
 
     }
+
+    public void Reset()
+    {
+        levelActive = false;
+    }
 }
