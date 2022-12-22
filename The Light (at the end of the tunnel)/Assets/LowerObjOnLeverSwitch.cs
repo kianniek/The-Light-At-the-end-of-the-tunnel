@@ -9,7 +9,8 @@ public class LowerObjOnLeverSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        downPos = transform.position - transform.up * amountDown;
+        downPos = transform.localPosition - (transform.up * amountDown);
+        
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class LowerObjOnLeverSwitch : MonoBehaviour
 
     public void Sink()
     {
-        transform.position = Vector3.Lerp(transform.position, downPos, 0.1f);
-        Debug.Log(transform.position);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, downPos, 0.01f);
+        Debug.Log(transform.localPosition);
     }
 }
