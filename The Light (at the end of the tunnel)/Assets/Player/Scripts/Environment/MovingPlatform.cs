@@ -69,7 +69,6 @@ public class MovingPlatform : MonoBehaviour
 
     void MovePlatform()
     {
-
         //If no waypoints have been assigned, return;
         if (waypoints.Count <= 0)
             return;
