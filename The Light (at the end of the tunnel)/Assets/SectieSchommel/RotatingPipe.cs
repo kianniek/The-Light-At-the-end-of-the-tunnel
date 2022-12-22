@@ -11,6 +11,7 @@ public class RotatingPipe : MonoBehaviour
 
     [SerializeField] Vector3[] rotationCheckpoints;
     int iteration = 0;
+    int angle = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,23 +25,25 @@ public class RotatingPipe : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (constantRotation)
-        {
-            transform.Rotate(Vector3.forward, rotationSpeed);
-        }
+
     }
 
-    IEnumerator RotateUsingCheckpoints()
+    IEnumerator RotateUsingCheckpoints(bool constant = false)
     {
-        while (true)
         {
-            //Rotate 90
-            yield return RotateObject(gameObject, rotationCheckpoints[0], Smoothness);
-            //Rotate -90
-            yield return RotateObject(gameObject, rotationCheckpoints[1], Smoothness);
+            while (true)
+            {
+                //Rotate 90
+                yield return RotateObject(gameObject, rotationCheckpoints[0], Smoothness);
 
-            //Wait?
-            yield return new WaitForSeconds(waitTime);
+                //Wait?
+                yield return new WaitForSeconds(waitTime);
+                //Rotate -90
+                yield return RotateObject(gameObject, rotationCheckpoints[1], Smoothness);
+
+                //Wait?
+                yield return new WaitForSeconds(waitTime);
+            }
         }
     }
 
