@@ -5882,6 +5882,7 @@ GameObject:
   - component: {fileID: 468546043}
   - component: {fileID: 468546042}
   - component: {fileID: 468546045}
+  - component: {fileID: 468546046}
   m_Layer: 0
   m_Name: WaterLevel
   m_TagString: Untagged
@@ -5981,6 +5982,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountDown: 6
+--- !u!114 &468546046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468546040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18e305fb97474044b11dff898a3f73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitWater: 0
 --- !u!43 &495730586
 Mesh:
   m_ObjectHideFlags: 0
@@ -26930,7 +26944,7 @@ PrefabInstance:
       objectReference: {fileID: 847051851}
     - target: {fileID: 719629017393186032, guid: 5627b66318f2dad4e96f227a3333edf2, type: 3}
       propertyPath: m_VersionIndex
-      value: 1957
+      value: 1960
       objectReference: {fileID: 0}
     - target: {fileID: 719629017393186044, guid: 5627b66318f2dad4e96f227a3333edf2, type: 3}
       propertyPath: m_Mesh
@@ -42222,7 +42236,7 @@ PrefabInstance:
       objectReference: {fileID: 261558298}
     - target: {fileID: 719629017393186032, guid: 5627b66318f2dad4e96f227a3333edf2, type: 3}
       propertyPath: m_VersionIndex
-      value: 1954
+      value: 1957
       objectReference: {fileID: 0}
     - target: {fileID: 719629017393186044, guid: 5627b66318f2dad4e96f227a3333edf2, type: 3}
       propertyPath: m_Mesh
