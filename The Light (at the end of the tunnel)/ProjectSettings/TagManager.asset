@@ -8,6 +8,9 @@ TagManager:
   - OutOfStomach
   - Bullet
   - Platform
+  tags:
+  - PathFollowObject
+  - Water
   layers:
   - Default
   - TransparentFX
