@@ -1,0 +1,74 @@
+using System.Collections;
+using System.Collections.Generic;
+<<<<<<< HEAD
+using UnityEngine;
+=======
+using System.Linq;
+using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
+>>>>>>> 8d6327693f3fba985e1471481d3265fbaa43afe2
+
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
+public class WaterManager : MonoBehaviour
+{
+<<<<<<< HEAD
+    private MeshFilter meshFilter;
+    private MeshRenderer meshRenderer;
+
+    private Vector3 resetPosition = new Vector3(28.2f, 5.3f, -128);
+
+    [SerializeField] GameObject player;
+
+    private void Awake()
+    {
+=======
+    public static WaterManager instance;
+    private MeshFilter meshFilter;
+    private MeshRenderer meshRenderer;
+    [SerializeField] private GameObject water;
+    [SerializeField] public float waterDecrease;
+
+    //private Vector3 resetPosition = new Vector3(29.25f, 4.79f, -23.4f);
+
+    private void Awake()
+    {
+        instance = this;
+        water = this.gameObject;
+>>>>>>> 8d6327693f3fba985e1471481d3265fbaa43afe2
+        meshFilter = GetComponent<MeshFilter>();
+    }
+
+    private void Update()
+    {
+        Vector3[] vertices = meshFilter.mesh.vertices;
+        for(int i = 0; i < vertices.Length; i++)
+        {
+            vertices[i].y = WaveManager.instance.GetWaveHeight(transform.position.x + vertices[i].x);
+        }
+
+        meshFilter.mesh.vertices = vertices;
+        meshFilter.mesh.RecalculateNormals();
+    }
+<<<<<<< HEAD
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            ResetPlayerPosition();
+        }
+    }
+
+    private void ResetPlayerPosition()
+    {
+        player.transform.position = resetPosition;
+    }
+=======
+    public void SinkWater()
+    {
+        water.transform.position = water.transform.position - new Vector3(0, waterDecrease, 0);
+    }
+   
+>>>>>>> 8d6327693f3fba985e1471481d3265fbaa43afe2
+}
