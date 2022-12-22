@@ -32,4 +32,10 @@ public class ReverseTrigger : MonoBehaviour
             activated = true;
         }
     }
+
+    public void Reset()
+    {
+        manualActivation = false;
+        activated = false;
+    }
 }
