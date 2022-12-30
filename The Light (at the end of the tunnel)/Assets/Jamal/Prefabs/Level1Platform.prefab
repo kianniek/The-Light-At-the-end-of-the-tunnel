@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4025817421033374738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.54, y: -0.7600006, z: -2.3599997}
-  m_LocalScale: {x: 2.5, y: 1, z: 2.5}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,11 +112,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Platformheight: {fileID: 0}
-  lerpspeed: 1
+  lerpspeed: 1.25
   waterTransform: {fileID: 2131119551147733554, guid: f0057b392f285a344b3cfdd675d380ef, type: 3}
   safe: {fileID: 2100000, guid: 462256408154e064fa8b4d6e8c083a46, type: 2}
   sinking: {fileID: 2100000, guid: 2bdced87492b8b449b2c46e8bd5a209b, type: 2}
-  startposition: {x: 0, y: 0, z: 0}
   isLowering: 0
 --- !u!65 &3237419605431241903
 BoxCollider:
