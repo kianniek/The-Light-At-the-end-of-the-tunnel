@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using TreeEditor;
@@ -8,10 +8,7 @@ using UnityEngine;
 public class PlatformRaycast : MonoBehaviour
 {
     [SerializeField] LayerMask mask;
-    [SerializeField] Transform Platformheight;
-    [Tooltip("Lerpspeed gets devided by 100")]
-    [SerializeField] float lerpspeed;
-    private int nextPlatform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +18,7 @@ public class PlatformRaycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-   //     CheckForPlatform();
+        //     CheckForPlatform();
     }
     private void FixedUpdate()
     {
@@ -37,10 +34,12 @@ public class PlatformRaycast : MonoBehaviour
         {
             Debug.Log(hit.collider.gameObject.tag);
 
-            platform = hit.collider.gameObject;
-            Debug.Log(platform.name);
-            platform.transform.position = Vector3.Lerp(platform.transform.position, new Vector3(platform.transform.position.x, Platformheight.transform.position.y, platform.transform.position.z), lerpspeed/10);
+          //  platform = hit.collider.gameObject;
+         //   platform.GetComponent<PlatformBehaviour>().isLowering = true;
 
         }
+
+
     }
+
 }

@@ -7,7 +7,8 @@ public class RotatingPipe : MonoBehaviour
     [SerializeField] bool constantRotation = false;
     [SerializeField] float rotationSpeed = 10;
     [SerializeField] float waitTime = 3;
-    [SerializeField] float Smoothness = 3;
+    [SerializeField] float duration = 3;
+    [SerializeField] AnimationCurve SmoothnessCurve;
 
     [SerializeField] Vector3[] rotationCheckpoints;
     int iteration = 0;
@@ -18,7 +19,7 @@ public class RotatingPipe : MonoBehaviour
         if (!constantRotation)
         {
             transform.rotation = Quaternion.Euler(rotationCheckpoints[0]);
-            StartCoroutine(RotateUsingCheckpoints());
+            StartCoroutine(RotateUsingCheckpoints(duration));
         }
     }
 
@@ -28,23 +29,22 @@ public class RotatingPipe : MonoBehaviour
 
     }
 
-    IEnumerator RotateUsingCheckpoints(bool constant = false)
+    IEnumerator RotateUsingCheckpoints(float duration)
     {
+        while (true)
         {
-            while (true)
-            {
-                //Rotate 90
-                yield return RotateObject(gameObject, rotationCheckpoints[0], Smoothness);
+            //Rotate
+            yield return RotateObject(gameObject, rotationCheckpoints[0], duration);
 
-                //Wait?
-                yield return new WaitForSeconds(waitTime);
-                //Rotate -90
-                yield return RotateObject(gameObject, rotationCheckpoints[1], Smoothness);
+            //Wait?
+            yield return new WaitForSeconds(waitTime);
+            //Rotates
+            yield return RotateObject(gameObject, rotationCheckpoints[1], duration);
 
-                //Wait?
-                yield return new WaitForSeconds(waitTime);
-            }
+            //Wait?
+            yield return new WaitForSeconds(waitTime);
         }
+
     }
 
     bool rotating = false;
@@ -62,8 +62,11 @@ public class RotatingPipe : MonoBehaviour
         float counter = 0;
         while (counter < duration)
         {
+            counter = counter + Time.deltaTime;
+            float percent = Mathf.Clamp01(counter / duration);
+            float curvePercent = SmoothnessCurve.Evaluate(percent);
             counter += Time.deltaTime;
-            gameObjectToMove.transform.rotation = Quaternion.Lerp(currentRot, newRot, counter / duration);
+            gameObjectToMove.transform.rotation = Quaternion.LerpUnclamped(currentRot, newRot, curvePercent);
             yield return null;
         }
         rotating = false;

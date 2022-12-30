@@ -20,7 +20,7 @@ public class SwitchLever : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                isSwitched = !isSwitched;
+                isSwitched = true;
             }
         }
     }
