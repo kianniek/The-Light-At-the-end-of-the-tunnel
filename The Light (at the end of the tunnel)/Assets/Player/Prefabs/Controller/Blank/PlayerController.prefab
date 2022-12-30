@@ -180,7 +180,7 @@ MonoBehaviour:
   jumpKeyIsPressed: 0
   movementSpeed: 5
   airControlRate: 15
-  jumpSpeed: 10
+  jumpSpeed: 8
   jumpDuration: 0.2
   airFriction: 2
   groundFriction: 100
