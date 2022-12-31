@@ -60,7 +60,7 @@ public class PlattformHandler : MonoBehaviour
             ResetCounter();
         }
         //Sets the red active if the player dies at the first part
-        else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint) && water.hitWater)
+        else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
         {
             RedActive();
 
