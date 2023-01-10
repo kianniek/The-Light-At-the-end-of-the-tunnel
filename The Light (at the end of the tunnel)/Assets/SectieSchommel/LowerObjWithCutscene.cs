@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LowerObjOnLeverSwitch : MonoBehaviour
+public class LowerObjWithCutscene : MonoBehaviour
 {
     Vector3 downPos;
     public float amountDown;
@@ -26,7 +26,7 @@ public class LowerObjOnLeverSwitch : MonoBehaviour
 
     public void Sink()
     {
-        if(Vector3.Distance(transform.localPosition, downPos))
+        //if(Vector3.Distance(transform.localPosition, downPos))
         StartCoroutine(SinkCutscene());
     }
 

@@ -1,0 +1,285 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3889383099996775808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3889383099996775811}
+  m_Layer: 0
+  m_Name: Stone pipe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3889383099996775811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3889383099996775808}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.789532, y: -6.2135525, z: -3.6047707}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3888465409056606968}
+  - {fileID: 3888465410847960031}
+  - {fileID: 3888465411054325247}
+  - {fileID: 3888465411063085687}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3889383099658126295
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3889383099996775811}
+    m_Modifications:
+    - target: {fileID: 1333626069639426, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_Name
+      value: rails bridge pillar tile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+--- !u!4 &3888465410847960031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+  m_PrefabInstance: {fileID: 3889383099658126295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3889383100004886007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3889383099996775811}
+    m_Modifications:
+    - target: {fileID: 1333626069639426, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_Name
+      value: rails bridge pillar tile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000043711385
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000043711392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+--- !u!4 &3888465411054325247 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+  m_PrefabInstance: {fileID: 3889383100004886007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3889383100013433471
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3889383099996775811}
+    m_Modifications:
+    - target: {fileID: 1333626069639426, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_Name
+      value: rails bridge pillar tile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+--- !u!4 &3888465411063085687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+  m_PrefabInstance: {fileID: 3889383100013433471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3889383101365560048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3889383099996775811}
+    m_Modifications:
+    - target: {fileID: 1333626069639426, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_Name
+      value: rails bridge pillar tile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+--- !u!4 &3888465409056606968 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4301164606367752, guid: 05c56c3966d762e4ab63075dcedca2a9, type: 3}
+  m_PrefabInstance: {fileID: 3889383101365560048}
+  m_PrefabAsset: {fileID: 0}
