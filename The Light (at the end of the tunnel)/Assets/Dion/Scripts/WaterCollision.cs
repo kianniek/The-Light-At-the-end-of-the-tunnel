@@ -12,6 +12,7 @@ public class WaterCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if(resetPosition == Vector3.zero) { resetPosition = GameObject.FindWithTag("Respawn").transform.position; }
             other.transform.position = resetPosition;
 
             hitWater = true;
