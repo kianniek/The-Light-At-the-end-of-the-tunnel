@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SwitchLever : MonoBehaviour
+public class TriggerStayEvent : MonoBehaviour
 {
     //This creates an interface in the inspector to assign functions
     public UnityEvent OtherFunctions;
-
+    [SerializeField] string CheckForTag = "Player";
     public bool isSwitched;
 
     void Start()
@@ -16,12 +16,9 @@ public class SwitchLever : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag(CheckForTag))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                isSwitched = true;
-            }
+            isSwitched = true;
         }
     }
 
