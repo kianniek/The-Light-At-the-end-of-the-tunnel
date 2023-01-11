@@ -102,9 +102,9 @@ public class MovingPlatform : MonoBehaviour
 
         //Move all controllrs on top of the platform the same distance;
 
-        for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
+        foreach (Rigidbody rb in triggerArea.rigidbodiesInTriggerArea)
         {
-            triggerArea.rigidbodiesInTriggerArea[i].MovePosition(triggerArea.rigidbodiesInTriggerArea[i].position + _movement);
+            rb.MovePosition(rb.position + _movement);
         }
     }
 

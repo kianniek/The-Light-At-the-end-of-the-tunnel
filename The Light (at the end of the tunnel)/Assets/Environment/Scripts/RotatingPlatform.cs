@@ -35,11 +35,11 @@ public class RotatingPlatform : MonoBehaviour
 
         //Move all controllrs on top of the platform the same distance;
 
-        for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
+        foreach (Rigidbody rb in triggerArea.rigidbodiesInTriggerArea)
         {
             Vector3 offsetRot = r.rotation.eulerAngles - rotationAmount;
-            Vector3 moveVector = RotatePointAroundPivot(triggerArea.rigidbodiesInTriggerArea[i].transform.position, transform.position, offsetRot);
-            triggerArea.rigidbodiesInTriggerArea[i].MovePosition(moveVector);
+            Vector3 moveVector = RotatePointAroundPivot(rb.transform.position, transform.position, offsetRot);
+            rb.MovePosition(moveVector);
         }
         rotationAmount = r.rotation.eulerAngles;
     }

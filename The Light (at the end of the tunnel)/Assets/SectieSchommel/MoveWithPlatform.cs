@@ -18,7 +18,7 @@ public class MoveWithPlatform : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         //Get normalized movement direction;
         Vector3 _movement = transform.position - startPos;
@@ -29,11 +29,14 @@ public class MoveWithPlatform : MonoBehaviour
             return;
 
         //Move all controllrs on top of the platform the same distance;
-
-        for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
+        foreach (Rigidbody rb in triggerArea.rigidbodiesInTriggerArea)
         {
-            triggerArea.rigidbodiesInTriggerArea[i].MovePosition(triggerArea.rigidbodiesInTriggerArea[i].position + _movement);
+            rb.MovePosition(rb.position + _movement);
         }
+        //for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
+        //{
+            //triggerArea.rigidbodiesInTriggerArea[i].MovePosition(triggerArea.rigidbodiesInTriggerArea[i].position + _movement);
+        //}
         startPos = transform.position;
     }
 }
