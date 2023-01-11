@@ -39,6 +39,7 @@ public class LowerObjWithCutscene : MonoBehaviour
     IEnumerator SinkCutscene()
     {
         yield return new WaitForSeconds(0.5f);
+
         playerMover.SetVelocity(Vector3.zero);
         playerController.SetMomentum(Vector3.zero);
         playerController.enabled = false;
@@ -78,11 +79,9 @@ public class LowerObjWithCutscene : MonoBehaviour
         float waitTime1 = 1f;
         while (elapsedTime1 < waitTime1)
         {
-            Debug.LogWarning(transform.localPosition);
 
             transform.localPosition = Vector3.Lerp(transform.localPosition, downPos, lerpSpeed * Time.deltaTime);
             elapsedTime1 += Time.deltaTime;
-            Debug.LogError(elapsedTime1);
             // Yield here
             yield return null;
         }
@@ -102,13 +101,11 @@ public class LowerObjWithCutscene : MonoBehaviour
             yield return null;
         }
 
-        Debug.LogError("1");
-        mainCam.transform.SetParent(mainCamControls[^1]); Debug.LogError("2");
-        mainCam.transform.SetPositionAndRotation(startCamPos, startCamRot); Debug.LogError("3");
+        mainCam.transform.SetParent(mainCamControls[^1]);
+        mainCam.transform.SetPositionAndRotation(startCamPos, startCamRot);
         for (int i = 0; i < mainCamControls.Length; i++)
         {
             mainCamControls[i].gameObject.SetActive(true);
-            Debug.LogError("1" + " " + "i");
         }
         playerController.enabled = true;
         playerMover.enabled = true;
