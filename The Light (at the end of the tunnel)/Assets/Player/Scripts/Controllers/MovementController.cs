@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 public class MovementController : Controller
 {
-
     //References to attached components;
     protected Transform tr;
     protected Mover mover;
@@ -55,6 +55,9 @@ public class MovementController : Controller
     [Tooltip("Whether to calculate and apply momentum relative to the controller's transform.")]
     public bool useLocalMomentum = false;
 
+    [Tooltip("Use this to not make the player move.")]
+    public bool blockInput = false;
+
     //Enum describing basic controller states; 
     public enum ControllerState
     {
@@ -92,6 +95,7 @@ public class MovementController : Controller
 
     void Update()
     {
+        if (blockInput) { return; }
         HandleJumpKeyInput();
     }
 
@@ -114,6 +118,7 @@ public class MovementController : Controller
 
     void FixedUpdate()
     {
+        if (blockInput) { return; }
         ControllerUpdate();
     }
 

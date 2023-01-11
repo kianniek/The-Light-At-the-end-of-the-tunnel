@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2365170382172174801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7876371207349532087}
+  m_Layer: 0
+  m_Name: LampPrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7876371207349532087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365170382172174801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9154807819841550970}
+  - {fileID: 9154979517046284430}
+  - {fileID: 9154807820349162367}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &9151905849912934387
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7876371207349532087}
+    m_Modifications:
+    - target: {fileID: 1457974370111084, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_Name
+      value: electric pole wire single 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.77000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+--- !u!4 &9154807820349162367 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+  m_PrefabInstance: {fileID: 9151905849912934387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9151905850480061918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7876371207349532087}
+    m_Modifications:
+    - target: {fileID: 1683709457801482, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_Name
+      value: sewer lamp lamp short (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+--- !u!4 &9154979517046284430 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4253719573794128, guid: 351807e29e9871a4588affd62e65ad7a, type: 3}
+  m_PrefabInstance: {fileID: 9151905850480061918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9151905850680395510
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7876371207349532087}
+    m_Modifications:
+    - target: {fileID: 1457974370111084, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_Name
+      value: electric pole wire single 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.77000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+--- !u!4 &9154807819841550970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4064709384895628, guid: dd3709cc8a1439946bf998e29c28d3c4, type: 3}
+  m_PrefabInstance: {fileID: 9151905850680395510}
+  m_PrefabAsset: {fileID: 0}

@@ -26,9 +26,9 @@ public class HangingPlatform : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0f, transform.rotation.y, 0f)), Time.fixedDeltaTime * returnTime);
             return;
         }
-        for (int i = 0; i < triggerArea.rigidbodiesInTriggerArea.Count; i++)
+        foreach (Rigidbody rbTA in triggerArea.rigidbodiesInTriggerArea)
         {
-            Rigidbody collision = triggerArea.rigidbodiesInTriggerArea[i];
+            Rigidbody collision = rbTA;
             //Transform oldParent = collision.transform.parent;
             float distance = Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(collision.transform.position.x, collision.transform.position.z));
 
