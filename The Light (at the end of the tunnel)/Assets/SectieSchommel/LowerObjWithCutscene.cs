@@ -72,7 +72,10 @@ public class LowerObjWithCutscene : MonoBehaviour
         // Make sure we got there
         mainCam.transform.position = posCamCutscene.transform.position;
         //play music
-        audioSource.Play();
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
 
         //Move the level of the water down
         float elapsedTime1 = 0;
