@@ -8,12 +8,15 @@ public class WaterBehaviour : MonoBehaviour
 {
     private float timer;
     private bool isTriggered;
-    private Vector3 spawnPosition;
-    private Quaternion spawnRotation;
+    public Vector3 spawnPosition;
+    public Quaternion spawnRotation;
+    public bool reverseStart;
+    public bool allowRespawn = true;
 
     [SerializeField] Transform player;
     [SerializeField] float deathScreenTime;
     [SerializeField] PipeRotation[] pipe;
+    [SerializeField] PlatformBehaviour[] platform;
     [SerializeField] LevelTrigger levelTrigger;
     [SerializeField] ReverseTrigger reverseTrigger;
 
@@ -22,7 +25,15 @@ public class WaterBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isTriggered = true;
+            if (allowRespawn)
+            {
+                isTriggered = true;
+            }
+            else
+            {
+                player.transform.position = spawnPosition;
+                player.transform.rotation = spawnRotation;
+            }
         }
     }
 
@@ -45,10 +56,17 @@ public class WaterBehaviour : MonoBehaviour
             player.transform.rotation = spawnRotation;
             isTriggered = false;
             timer = 0;
-            for(int i = 0; i < pipe.Length; i++)
+            for (int i = 0; i < pipe.Length; i++)
                 pipe[i].Reset();
+            for (int i = 0; i < platform.Length; i++)
+                platform[i].Reset();
             levelTrigger.Reset();
             reverseTrigger.Reset();
+            if (reverseStart)
+            {
+                for (int i = 0; i < pipe.Length; i++)
+                    pipe[i].reverseSegmentActive = true;
+            }
         }
         //SceneManager.LoadScene("Casper");
     }
