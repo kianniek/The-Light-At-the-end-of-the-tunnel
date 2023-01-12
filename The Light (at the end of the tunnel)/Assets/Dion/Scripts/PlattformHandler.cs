@@ -16,13 +16,14 @@ public class PlattformHandler : MonoBehaviour
 
     private bool red;
     private bool blue;
+    public bool isJumping;
 
     private int jumpCount = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int b = 0; b < bluePlattforms.Length; b++)
+        for (int b = 0; b < bluePlattforms.Length; b++)
         {
             bluePlattforms[b].SetActive(false);
         }
@@ -37,45 +38,52 @@ public class PlattformHandler : MonoBehaviour
     void Update()
     {
         HandlePlattforms();
-        //SetPlattformOffAtCheckpoint();
 
-        Debug.Log(checkpoints[0].hitCheckpoint);
+        Debug.Log(water.hitWater);
     }
 
     private void HandlePlattforms()
     {
-        //Blue on
-        if ((jumpCount == 0 && movementPlayer.jumpKeyWasPressed && player.isGrounded))
+        //Checks if player is jumping
+        if (movementPlayer.jumpKeyIsPressed)
         {
-            Invoke("BlueActive", 0.5f);
+            isJumping = true;
+        }
+        else if (player.isGrounded)
+        {
+            isJumping = false;
+        }
+
+        //Blue on
+        if ((jumpCount == 0 && isJumping && player.isGrounded))
+        {
+            Invoke("BlueActive", 0.4f);
         }
         //Red on
-        else if (jumpCount == 1 && movementPlayer.jumpKeyWasPressed && player.isGrounded)
+        else if ((jumpCount == 1 && isJumping && player.isGrounded))
         {
-            Invoke("RedActive", 0.5f);
-        }
-        //Reset
-        else if ((red && blue))
-        {
-            ResetCounter();
+            Invoke("RedActive", 0.4f);
         }
         //Sets the red active if the player dies at the first part
         else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
         {
+            water.hitWater = false;
+
             RedActive();
-
-            checkpoints[0].hitCheckpoint = false;
-            checkpoints[2].hitCheckpoint = false;
-
-            blue = true;
         }
         //Sets the blue active if the player dies at the second part
         else if (checkpoints[1].hitCheckpoint && water.hitWater)
         {
-            checkpoints[1].hitCheckpoint = false;
-
             BlueActive();
         }
+
+        //Reset
+        if ((red && blue) || jumpCount == 2)
+        {
+            ResetCounter();
+        }
+
+        CheckCurrentCheckpoint();
     }
 
     private void BlueActive()
@@ -83,6 +91,8 @@ public class PlattformHandler : MonoBehaviour
         blue = true;
 
         jumpCount = 1;
+
+        water.hitWater = false;
 
         for (int b = 0; b < bluePlattforms.Length; b++)
         {
@@ -100,6 +110,8 @@ public class PlattformHandler : MonoBehaviour
         red = true;
 
         jumpCount = 2;
+
+        water.hitWater = false;
 
         for (int r = 0; r < redPlattforms.Length; r++)
         {
@@ -120,11 +132,21 @@ public class PlattformHandler : MonoBehaviour
         blue = false;
     }
 
-    //private void SetPlattformOffAtCheckpoint()
-    //{
-    //    if (checkpoints[0].hitCheckpoint && water.hitWater)
-    //    {
-    //        RedActive();    
-    //    }
-    //}
+    private void CheckCurrentCheckpoint()
+    {
+        //Set previous boolean hitCheckpoint to false if the player hits
+        //The next checkpoint
+        if (checkpoints[1].hitCheckpoint)
+        {
+            checkpoints[0].hitCheckpoint = false;
+        }
+        else if (checkpoints[2].hitCheckpoint)
+        {
+            checkpoints[1].hitCheckpoint = false;
+        }
+        else if (checkpoints[3].hitCheckpoint)
+        {
+            checkpoints[2].hitCheckpoint = false;
+        }
+    }
 }
