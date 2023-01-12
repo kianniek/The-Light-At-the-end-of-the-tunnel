@@ -16,7 +16,7 @@ public class PlattformHandler : MonoBehaviour
 
     private bool red;
     private bool blue;
-    private bool isJumping;
+    public bool isJumping;
 
     private int jumpCount = 0;
 
@@ -39,7 +39,7 @@ public class PlattformHandler : MonoBehaviour
     {
         HandlePlattforms();
 
-        Debug.Log(jumpCount);
+        Debug.Log(water.hitWater);
     }
 
     private void HandlePlattforms()
@@ -60,32 +60,30 @@ public class PlattformHandler : MonoBehaviour
             Invoke("BlueActive", 0.4f);
         }
         //Red on
-        else if (jumpCount == 1 && isJumping && player.isGrounded)
+        else if ((jumpCount == 1 && isJumping && player.isGrounded))
         {
             Invoke("RedActive", 0.4f);
-        }
-        //Reset
-        else if ((red && blue))
-        {
-            ResetCounter();
         }
         //Sets the red active if the player dies at the first part
         else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
         {
+            water.hitWater = false;
+
             RedActive();
-
-            checkpoints[0].hitCheckpoint = false;
-            checkpoints[2].hitCheckpoint = false;
-
-            blue = true;
         }
         //Sets the blue active if the player dies at the second part
         else if (checkpoints[1].hitCheckpoint && water.hitWater)
         {
-            checkpoints[1].hitCheckpoint = false;
-
             BlueActive();
         }
+
+        //Reset
+        if ((red && blue) || jumpCount == 2)
+        {
+            ResetCounter();
+        }
+
+        CheckCurrentCheckpoint();
     }
 
     private void BlueActive()
@@ -93,6 +91,8 @@ public class PlattformHandler : MonoBehaviour
         blue = true;
 
         jumpCount = 1;
+
+        water.hitWater = false;
 
         for (int b = 0; b < bluePlattforms.Length; b++)
         {
@@ -111,6 +111,8 @@ public class PlattformHandler : MonoBehaviour
 
         jumpCount = 2;
 
+        water.hitWater = false;
+
         for (int r = 0; r < redPlattforms.Length; r++)
         {
             redPlattforms[r].SetActive(true);
@@ -128,5 +130,23 @@ public class PlattformHandler : MonoBehaviour
 
         red = false;
         blue = false;
+    }
+
+    private void CheckCurrentCheckpoint()
+    {
+        //Set previous boolean hitCheckpoint to false if the player hits
+        //The next checkpoint
+        if (checkpoints[1].hitCheckpoint)
+        {
+            checkpoints[0].hitCheckpoint = false;
+        }
+        else if (checkpoints[2].hitCheckpoint)
+        {
+            checkpoints[1].hitCheckpoint = false;
+        }
+        else if (checkpoints[3].hitCheckpoint)
+        {
+            checkpoints[2].hitCheckpoint = false;
+        }
     }
 }

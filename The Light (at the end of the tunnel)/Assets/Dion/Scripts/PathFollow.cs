@@ -24,7 +24,7 @@ public class PathFollow : MonoBehaviour
     {
         FollowPath();
 
-        Debug.Log(current);
+        //Debug.Log(current);
     }
 
     private void FollowPath()
