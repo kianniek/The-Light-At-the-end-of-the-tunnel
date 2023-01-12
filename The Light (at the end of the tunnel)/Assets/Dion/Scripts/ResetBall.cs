@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class ResetBall : MonoBehaviour
 {
-    public Vector3 resetPosition;
+    //public Vector3 resetPosition;
 
     public PathFollow path;
 
     private bool hitWater;
+
+    public GameObject resetPoint;
 
     //Resetting ball
     private void OnTriggerEnter(Collider other)
@@ -39,6 +41,6 @@ public class ResetBall : MonoBehaviour
 
         path.current = 0;
 
-        transform.position = resetPosition;
+        transform.position = resetPoint.transform.position;
     }
 }
