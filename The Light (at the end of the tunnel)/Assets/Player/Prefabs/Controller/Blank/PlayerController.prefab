@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 114954128155224326}
   - component: {fileID: 114318903812174364}
   - component: {fileID: 3198507820939736963}
+  - component: {fileID: 2771095554563914295}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -233,6 +234,22 @@ MonoBehaviour:
   speedToAnimationRatio: 5
   useStrafeAnimations: 1
   landVelocityThreshold: 5
+--- !u!114 &2771095554563914295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186418702867920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ef8a69775ed284cb426f8f139cb1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptsToDisable:
+  - {fileID: 114954128155224326}
+  circleWipe: {fileID: 689012498698529641}
+  player: {fileID: 114507584543769724}
 --- !u!1 &1354820435992630
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,9 +413,10 @@ GameObject:
   - component: {fileID: 81751426842207960}
   - component: {fileID: 6183496579618614240}
   - component: {fileID: 730643502191733362}
+  - component: {fileID: 689012498698529641}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +514,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52108b680c1b33e4bb694c59b7835f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &689012498698529641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771156378679318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc86aa1d883035d489a37b49e19a0d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: b0d1ccff3b4b5464abcf59e16390c4d7, type: 3}
+  radius: 2
+  horizontal: 34
+  verical: 16
+  fadeOutduration: 0.2
+  fadeInduration: 0.8
+  fadeColour: {r: 0.25414145, g: 0.2735849, b: 0.21525453, a: 1}
+  fadeTexture: {fileID: 2800000, guid: 664241372207bcf4280a883d99997ac6, type: 3}
+  offset: {x: 0, y: 0}
 --- !u!1 &1982286698503342
 GameObject:
   m_ObjectHideFlags: 0
