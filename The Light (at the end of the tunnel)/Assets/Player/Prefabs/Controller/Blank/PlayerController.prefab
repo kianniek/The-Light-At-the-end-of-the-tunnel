@@ -135,18 +135,28 @@ MonoBehaviour:
   colliderHeight: 2
   colliderThickness: 1
   colliderOffset: {x: 0, y: 0.5, z: 0}
-  sensorType: 0
+  sensorType: 2
   isInDebugMode: 0
-  sensorArrayRows: 1
+  sensorArrayRows: 2
   sensorArrayRayCount: 5
   sensorArrayRowsAreOffset: 0
   raycastArrayPreviewPositions:
   - {x: 0, y: 0, z: 0}
+  - {x: 0.5, y: 0, z: 0}
+  - {x: 0.15450849, y: 0, z: 0.47552827}
+  - {x: -0.40450853, y: 0, z: 0.2938926}
+  - {x: -0.40450853, y: 0, z: -0.29389256}
+  - {x: 0.15450856, y: 0, z: -0.47552824}
   - {x: 1, y: 0, z: 0}
+  - {x: 0.809017, y: 0, z: 0.58778524}
   - {x: 0.30901697, y: 0, z: 0.95105654}
+  - {x: -0.30901694, y: 0, z: 0.95105654}
   - {x: -0.80901706, y: 0, z: 0.5877852}
+  - {x: -1, y: 0, z: -0.00000008742278}
   - {x: -0.80901706, y: 0, z: -0.5877851}
+  - {x: -0.3090171, y: 0, z: -0.9510565}
   - {x: 0.30901712, y: 0, z: -0.9510565}
+  - {x: 0.80901694, y: 0, z: -0.5877853}
   isGrounded: 0
 --- !u!54 &54380516611589992
 Rigidbody:
@@ -188,6 +198,7 @@ MonoBehaviour:
   slideGravity: 5
   slopeLimit: 80
   useLocalMomentum: 1
+  blockInput: 0
   cameraTransform: {fileID: 4048462127497940}
 --- !u!114 &114318903812174364
 MonoBehaviour:
