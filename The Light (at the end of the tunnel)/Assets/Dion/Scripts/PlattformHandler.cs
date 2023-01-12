@@ -39,7 +39,7 @@ public class PlattformHandler : MonoBehaviour
     {
         HandlePlattforms();
 
-        Debug.Log(water.hitWater);
+        //Debug.Log(water.hitWater);
     }
 
     private void HandlePlattforms()
