@@ -16,6 +16,7 @@ public class PlattformHandler : MonoBehaviour
 
     private bool red;
     private bool blue;
+    private bool isJumping;
 
     private int jumpCount = 0;
 
@@ -37,22 +38,31 @@ public class PlattformHandler : MonoBehaviour
     void Update()
     {
         HandlePlattforms();
-        //SetPlattformOffAtCheckpoint();
 
-        Debug.Log(checkpoints[0].hitCheckpoint);
+        Debug.Log(jumpCount);
     }
 
     private void HandlePlattforms()
     {
-        //Blue on
-        if ((jumpCount == 0 && movementPlayer.jumpKeyWasPressed && player.isGrounded))
+        //Checks if player is jumping
+        if (movementPlayer.jumpKeyIsPressed)
         {
-            Invoke("BlueActive", 0.5f);
+            isJumping = true;
+        }
+        else if (player.isGrounded)
+        {
+            isJumping = false;
+        }
+
+        //Blue on
+        if ((jumpCount == 0 && isJumping && player.isGrounded))
+        {
+            Invoke("BlueActive", 0.4f);
         }
         //Red on
-        else if (jumpCount == 1 && movementPlayer.jumpKeyWasPressed && player.isGrounded)
+        else if (jumpCount == 1 && isJumping && player.isGrounded)
         {
-            Invoke("RedActive", 0.5f);
+            Invoke("RedActive", 0.4f);
         }
         //Reset
         else if ((red && blue))
@@ -119,12 +129,4 @@ public class PlattformHandler : MonoBehaviour
         red = false;
         blue = false;
     }
-
-    //private void SetPlattformOffAtCheckpoint()
-    //{
-    //    if (checkpoints[0].hitCheckpoint && water.hitWater)
-    //    {
-    //        RedActive();    
-    //    }
-    //}
 }
