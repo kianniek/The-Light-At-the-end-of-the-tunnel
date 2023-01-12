@@ -29,7 +29,7 @@ public class ResetBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.position = WaterCollision.resetPosition;
+            collision.transform.position = DeathManager.resetPosition;
         }
     }
 

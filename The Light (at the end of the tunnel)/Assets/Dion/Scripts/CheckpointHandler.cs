@@ -9,7 +9,7 @@ public class CheckpointHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            WaterCollision.resetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            DeathManager.resetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
             hitCheckpoint = true;
         }
