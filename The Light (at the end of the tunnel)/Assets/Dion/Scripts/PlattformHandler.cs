@@ -14,11 +14,11 @@ public class PlattformHandler : MonoBehaviour
 
     public CheckpointHandler[] checkpoints;
 
-    private bool red;
-    private bool blue;
+    public bool red;
+    public bool blue;
     public bool isJumping;
 
-    private int jumpCount = 0;
+    public int jumpCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class PlattformHandler : MonoBehaviour
     {
         HandlePlattforms();
 
-        //Debug.Log(water.hitWater);
+        //Debug.Log(jumpCount);
     }
 
     private void HandlePlattforms()
