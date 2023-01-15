@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class RotatingObjectBehaviour : MonoBehaviour
 {
+    enum Direction
+    {
+        Forward,
+        Right,
+        Up,
+
+        BackWards,
+        Left,
+        Down,
+    }
     public float rotationSpeed;
-    public float rotationDirection;
+    [SerializeField] Direction rotationDirection = Direction.Forward;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -14,6 +25,29 @@ public class RotatingObjectBehaviour : MonoBehaviour
 
     private void Rotation()
     {
-        transform.Rotate(rotationSpeed * rotationDirection, transform.rotation.y, transform.rotation.z);
+        switch (rotationDirection)
+        {
+            case Direction.Forward:
+                transform.Rotate(transform.forward * rotationSpeed);
+                break;
+            case Direction.Right:
+                transform.Rotate(transform.right * rotationSpeed);
+                break;
+            case Direction.Left:
+                transform.Rotate(-transform.right * rotationSpeed);
+                break;
+            case Direction.Down:
+                transform.Rotate(-transform.up * rotationSpeed);
+                break;
+            case Direction.BackWards:
+                transform.Rotate(-transform.forward * rotationSpeed);
+                break;
+            case Direction.Up:
+                transform.Rotate(transform.up * rotationSpeed);
+                break;
+            default:
+                transform.Rotate(transform.right * rotationSpeed);
+                break;
+        }
     }
 }
