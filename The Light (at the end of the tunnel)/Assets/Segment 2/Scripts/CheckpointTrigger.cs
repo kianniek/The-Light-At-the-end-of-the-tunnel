@@ -18,8 +18,8 @@ public class CheckpointTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             water.allowRespawn = false;
-            water.spawnPosition = respawnPosition;
-            water.spawnRotation = Quaternion.Euler(respawnRotation);
+            //water.spawnPosition = respawnPosition;
+            //water.spawnRotation = Quaternion.Euler(respawnRotation);
         }
     }
 

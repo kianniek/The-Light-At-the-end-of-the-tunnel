@@ -11,13 +11,13 @@ public class FadeController : MonoBehaviour
 
     private void Update()
     {
-        if(playerMovement.GetVelocity()== Vector3.zero)
+        if(playerMovement.GetVelocity() == Vector3.zero)
         {
-            fadetimer+= 0.01f;
+            fadetimer += 0.01f * Time.deltaTime;
         }
         else
         {
-            fadetimer -= 0.1f;
+            fadetimer -= 0.1f * Time.deltaTime;
         }
         if(fadetimer < 0)
         {

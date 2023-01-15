@@ -11,7 +11,7 @@ public class Water : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ResetAllPlatforms();
-            other.transform.position = resetPosition.position;
+            //other.transform.position = resetPosition.position;
         }
     }
     void ResetAllPlatforms()

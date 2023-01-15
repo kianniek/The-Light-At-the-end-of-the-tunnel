@@ -8,12 +8,12 @@ public class WaterBehaviour : MonoBehaviour
 {
     private float timer;
     private bool isTriggered;
-    public Vector3 spawnPosition;
-    public Quaternion spawnRotation;
+    //public Vector3 spawnPosition;
+    //public Quaternion spawnRotation;
     public bool reverseStart;
     public bool allowRespawn = true;
 
-    [SerializeField] Transform player;
+    //[SerializeField] Transform player;
     [SerializeField] float deathScreenTime;
     [SerializeField] PipeRotation[] pipe;
     [SerializeField] PlatformBehaviour[] platform;
@@ -29,19 +29,19 @@ public class WaterBehaviour : MonoBehaviour
             {
                 isTriggered = true;
             }
-            else
-            {
-                player.transform.position = spawnPosition;
-                player.transform.rotation = spawnRotation;
-            }
+            //else
+            //{
+            //    player.transform.position = spawnPosition;
+            //    player.transform.rotation = spawnRotation;
+            //}
         }
     }
 
     void Start()
     {
         isTriggered = false;
-        spawnPosition = player.transform.position;
-        spawnRotation = player.transform.rotation;
+        //spawnPosition = player.transform.position;
+        //spawnRotation = player.transform.rotation;
     }
 
     // Update is called once per frame
@@ -52,8 +52,8 @@ public class WaterBehaviour : MonoBehaviour
 
         if (timer >= deathScreenTime && isTriggered)
         {
-            player.transform.position = spawnPosition;
-            player.transform.rotation = spawnRotation;
+            //player.transform.position = spawnPosition;
+            //player.transform.rotation = spawnRotation;
             isTriggered = false;
             timer = 0;
             for (int i = 0; i < pipe.Length; i++)
@@ -69,5 +69,34 @@ public class WaterBehaviour : MonoBehaviour
             }
         }
         //SceneManager.LoadScene("Casper");
+    }
+
+    public void ResetAll()
+    {
+        if (allowRespawn)
+        {
+            isTriggered = true;
+        }
+        if (isTriggered)
+            timer += Time.deltaTime;
+
+        if (timer >= deathScreenTime && isTriggered)
+        {
+            //player.transform.position = spawnPosition;
+            //player.transform.rotation = spawnRotation;
+            isTriggered = false;
+            timer = 0;
+            for (int i = 0; i < pipe.Length; i++)
+                pipe[i].Reset();
+            for (int i = 0; i < platform.Length; i++)
+                platform[i].Reset();
+            levelTrigger.Reset();
+            reverseTrigger.Reset();
+            if (reverseStart)
+            {
+                for (int i = 0; i < pipe.Length; i++)
+                    pipe[i].reverseSegmentActive = true;
+            }
+        }
     }
 }
