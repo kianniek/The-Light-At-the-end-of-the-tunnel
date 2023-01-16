@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2125348642071112322}
   - component: {fileID: 3444008984704459332}
   m_Layer: 0
-  m_Name: Checkpoint
+  m_Name: PlatformSwitchColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - clip: {fileID: 8300000, guid: 39f762bcda80fd14d84102d69245bc6d, type: 3}
+  - clip: {fileID: 8300000, guid: 771296b5b43fb3a45b96659f2adb06ca, type: 3}
     stopAfterSeconds: 0
     fadeOut: 0
   AudioSource: {fileID: 2125348642071112322}
