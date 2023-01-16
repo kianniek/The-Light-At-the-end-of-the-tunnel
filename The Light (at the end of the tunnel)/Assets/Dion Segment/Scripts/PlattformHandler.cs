@@ -10,7 +10,7 @@ public class PlattformHandler : MonoBehaviour
     public MovementController movementPlayer;
     public Mover player;
 
-    public WaterCollision water;
+    public WaterCollision[] water;
 
     public CheckpointHandler[] checkpoints;
 
@@ -54,46 +54,24 @@ public class PlattformHandler : MonoBehaviour
             isJumping = false;
         }
 
-        ////Blue on
-        //if ((jumpCount == 0 && isJumping && player.isGrounded) || (checkpoints[1].hitCheckpoint && water.hitWater))
-        //{
-        //    water.hitWater = false;
-
-        //    Invoke("BlueActive", 0.4f);
-        //}
         //Blue on
-        if ((jumpCount == 0 && isJumping && player.isGrounded))
+        if ((jumpCount == 0 && isJumping && player.isGrounded) || (checkpoints[1].hitCheckpoint && water[1].hitWater))
         {
-            water.hitWater = false;
+            water[1].hitWater = false;
 
             Invoke("BlueActive", 0.4f);
         }
-        ////Red on
-        //else if ((jumpCount == 1 && isJumping && player.isGrounded) || 
-        //    ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater))
-        //{
-        //    water.hitWater = false;
 
-        //    Invoke("RedActive", 0.4f);
-        //}
         //Red on
-        else if ((jumpCount == 1 && isJumping && player.isGrounded))
+        else if ((jumpCount == 1 && isJumping && player.isGrounded) || ((checkpoints[0].hitCheckpoint && water[0].hitWater) ||
+            (checkpoints[2].hitCheckpoint && water[2].hitWater) || (checkpoints[3].hitCheckpoint && water[3].hitWater)))
         {
-            water.hitWater = false;
+            water[0].hitWater = false;
+            water[2].hitWater = false;
+            water[3].hitWater = false;
 
             Invoke("RedActive", 0.4f);
         }
-        ////Sets the red active if the player dies at the first part
-        //else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
-        //{ 
-
-        //    RedActive();
-        //}
-        ////Sets the blue active if the player dies at the second part
-        //else if (checkpoints[1].hitCheckpoint && water.hitWater)
-        //{
-        //    BlueActive();
-        //}
 
         //Reset
         if ((red && blue) || jumpCount == 2)

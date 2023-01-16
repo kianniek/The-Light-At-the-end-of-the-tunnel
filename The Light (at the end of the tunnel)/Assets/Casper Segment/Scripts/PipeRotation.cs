@@ -24,7 +24,7 @@ public class PipeRotation : MonoBehaviour
     {
         rotationSpeed = rpm * 6;
         currentRotation = offsetRotation;
-        transform.rotation = Quaternion.Euler(offsetRotation);
+        transform.localRotation = Quaternion.Euler(offsetRotation);
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class PipeRotation : MonoBehaviour
             }
 
             currentRotation = new Vector3(currentRotation.x + (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
-            transform.rotation = Quaternion.Euler(currentRotation);
+            transform.localRotation = Quaternion.Euler(currentRotation);
         }
     }
 
@@ -101,7 +101,7 @@ public class PipeRotation : MonoBehaviour
                 currentRotation = new Vector3(currentRotation.x - (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
             else
                 currentRotation = new Vector3(currentRotation.x + (Time.deltaTime * rotationSpeed * currentAcceleration), currentRotation.y, currentRotation.z);
-            transform.rotation = Quaternion.Euler(currentRotation);
+            transform.localRotation = Quaternion.Euler(currentRotation);
         }
     }
 
