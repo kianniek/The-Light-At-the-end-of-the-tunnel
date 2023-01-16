@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5168629347434373308
+--- !u!1 &2095972069552944420
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3254839380231097452}
-  - component: {fileID: 8160737723412210924}
-  - component: {fileID: 2620698880902868148}
-  - component: {fileID: 3805816977681076754}
+  - component: {fileID: 6679234339260301425}
+  - component: {fileID: 9011725921746006185}
+  - component: {fileID: 2125348642071112322}
+  - component: {fileID: 3444008984704459332}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3254839380231097452
+--- !u!4 &6679234339260301425
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168629347434373308}
+  m_GameObject: {fileID: 2095972069552944420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.512688, y: 2.622891, z: -16.51363}
+  m_LocalPosition: {x: -150.682, y: 1.6499996, z: -0.77010846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8160737723412210924
+--- !u!114 &9011725921746006185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168629347434373308}
+  m_GameObject: {fileID: 2095972069552944420}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c952d4108dc4e0540bd6881f111ec7b5, type: 3}
@@ -48,21 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clip: {fileID: 8300000, guid: 39f762bcda80fd14d84102d69245bc6d, type: 3}
-    volume: 1
-  AudioSource: {fileID: 2620698880902868148}
---- !u!82 &2620698880902868148
+    stopAfterSeconds: 0
+    fadeOut: 0
+  AudioSource: {fileID: 2125348642071112322}
+--- !u!82 &2125348642071112322
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168629347434373308}
+  m_GameObject: {fileID: 2095972069552944420}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.195
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -146,16 +147,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!65 &3805816977681076754
+--- !u!65 &3444008984704459332
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5168629347434373308}
+  m_GameObject: {fileID: 2095972069552944420}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.8460236, y: 1, z: 19.519424}
+  m_Center: {x: 0.53795624, y: 0, z: 0.35494423}
