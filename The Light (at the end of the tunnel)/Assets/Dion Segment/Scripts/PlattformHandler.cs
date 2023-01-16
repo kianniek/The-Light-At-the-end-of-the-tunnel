@@ -54,28 +54,46 @@ public class PlattformHandler : MonoBehaviour
             isJumping = false;
         }
 
+        ////Blue on
+        //if ((jumpCount == 0 && isJumping && player.isGrounded) || (checkpoints[1].hitCheckpoint && water.hitWater))
+        //{
+        //    water.hitWater = false;
+
+        //    Invoke("BlueActive", 0.4f);
+        //}
         //Blue on
         if ((jumpCount == 0 && isJumping && player.isGrounded))
         {
+            water.hitWater = false;
+
             Invoke("BlueActive", 0.4f);
         }
+        ////Red on
+        //else if ((jumpCount == 1 && isJumping && player.isGrounded) || 
+        //    ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater))
+        //{
+        //    water.hitWater = false;
+
+        //    Invoke("RedActive", 0.4f);
+        //}
         //Red on
         else if ((jumpCount == 1 && isJumping && player.isGrounded))
         {
-            Invoke("RedActive", 0.4f);
-        }
-        //Sets the red active if the player dies at the first part
-        else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
-        {
             water.hitWater = false;
 
-            RedActive();
+            Invoke("RedActive", 0.4f);
         }
-        //Sets the blue active if the player dies at the second part
-        else if (checkpoints[1].hitCheckpoint && water.hitWater)
-        {
-            BlueActive();
-        }
+        ////Sets the red active if the player dies at the first part
+        //else if ((checkpoints[0].hitCheckpoint || checkpoints[2].hitCheckpoint || checkpoints[3].hitCheckpoint) && water.hitWater)
+        //{ 
+
+        //    RedActive();
+        //}
+        ////Sets the blue active if the player dies at the second part
+        //else if (checkpoints[1].hitCheckpoint && water.hitWater)
+        //{
+        //    BlueActive();
+        //}
 
         //Reset
         if ((red && blue) || jumpCount == 2)
@@ -91,8 +109,6 @@ public class PlattformHandler : MonoBehaviour
         blue = true;
 
         jumpCount = 1;
-
-        water.hitWater = false;
 
         for (int b = 0; b < bluePlattforms.Length; b++)
         {
@@ -110,8 +126,6 @@ public class PlattformHandler : MonoBehaviour
         red = true;
 
         jumpCount = 2;
-
-        water.hitWater = false;
 
         for (int r = 0; r < redPlattforms.Length; r++)
         {
@@ -150,3 +164,4 @@ public class PlattformHandler : MonoBehaviour
         }
     }
 }
+
