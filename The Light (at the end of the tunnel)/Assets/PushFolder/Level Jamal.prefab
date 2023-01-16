@@ -12894,10 +12894,6 @@ PrefabInstance:
       value: WaterLevel (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3228301510853099000, guid: 7be026a6e0c01654eacc77892940d25e, type: 3}
-      propertyPath: allPlatforms.Array.size
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 3228301510853099000, guid: 7be026a6e0c01654eacc77892940d25e, type: 3}
       propertyPath: allPlatforms.Array.data[0]
       value: 
       objectReference: {fileID: 821397790335920017}
