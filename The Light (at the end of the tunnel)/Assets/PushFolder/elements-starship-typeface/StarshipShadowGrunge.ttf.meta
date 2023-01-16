@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 43a56a1cdff3f904db5ca7fc58dfa96f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Starship Shadow Grunge
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 80b658cd60c53cc4a9bee81e89e075ed, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
