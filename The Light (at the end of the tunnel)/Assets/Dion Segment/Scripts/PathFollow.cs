@@ -24,7 +24,7 @@ public class PathFollow : MonoBehaviour
     {
         FollowPath();
 
-        Debug.Log(current);
+        //Debug.Log(current);
     }
 
     private void FollowPath()
@@ -35,8 +35,8 @@ public class PathFollow : MonoBehaviour
         obj.transform.position = Vector3.MoveTowards(actualPosition, wayPoints[current].transform.position, speed * Time.deltaTime);
 
         //Checking for new way point
-        if ((actualPosition.x >= wayPoints[current].transform.position.x && actualPosition.y <= wayPoints[current].transform.position.y &&
-            actualPosition.z >= wayPoints[current].transform.position.z) && current != numberOfPoints - 1)
+        if ((actualPosition.x <= wayPoints[current].transform.position.x && actualPosition.y <= wayPoints[current].transform.position.y &&
+            actualPosition.z <= wayPoints[current].transform.position.z) && current != numberOfPoints - 1)
         {
             current++;
         }
