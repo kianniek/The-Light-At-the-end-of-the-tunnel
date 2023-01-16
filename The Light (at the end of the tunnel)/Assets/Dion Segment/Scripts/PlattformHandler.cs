@@ -10,7 +10,7 @@ public class PlattformHandler : MonoBehaviour
     public MovementController movementPlayer;
     public Mover player;
 
-    public WaterCollision water;
+    public WaterCollision[] water;
 
     public CheckpointHandler[] checkpoints;
 
@@ -64,7 +64,7 @@ public class PlattformHandler : MonoBehaviour
         //Blue on
         if ((jumpCount == 0 && isJumping && player.isGrounded))
         {
-            water.hitWater = false;
+            water[0].hitWater = false;
 
             Invoke("BlueActive", 0.4f);
         }
@@ -79,7 +79,7 @@ public class PlattformHandler : MonoBehaviour
         //Red on
         else if ((jumpCount == 1 && isJumping && player.isGrounded))
         {
-            water.hitWater = false;
+            water[0].hitWater = false;
 
             Invoke("RedActive", 0.4f);
         }
