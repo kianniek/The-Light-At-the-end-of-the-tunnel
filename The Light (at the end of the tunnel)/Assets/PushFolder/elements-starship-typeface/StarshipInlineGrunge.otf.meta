@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ade2a43b708979f458f7b167bce53440
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Starship Inline Grunge
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b23b40c7744945041aec43d1ad62dcf6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
