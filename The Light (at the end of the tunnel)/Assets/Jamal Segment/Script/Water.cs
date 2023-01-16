@@ -6,6 +6,7 @@ public class Water : MonoBehaviour
 {
     [SerializeField] Transform resetPosition;
     [SerializeField] PlatformBehaviour[] allPlatforms;
+    [SerializeField] SoundManager[] allSounds;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -19,6 +20,10 @@ public class Water : MonoBehaviour
         for (int i = 0; i < allPlatforms.Length; i++)
         {
             allPlatforms[i].Reset();
+        }
+        for (int i = 0; i < allSounds.Length; i++)
+        {
+            allSounds[i].Reset();
         }
     }
 }
