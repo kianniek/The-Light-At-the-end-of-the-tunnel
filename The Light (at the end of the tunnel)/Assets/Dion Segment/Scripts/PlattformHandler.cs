@@ -76,7 +76,7 @@ public class PlattformHandler : MonoBehaviour
         //Reset
         if ((red && blue) ||(jumpCount == 2))
         {
-            ResetCounter();
+            Invoke("ResetCounter", 0.3f);
 
             SetHitChecksFalse();
         }

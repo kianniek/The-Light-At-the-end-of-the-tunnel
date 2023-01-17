@@ -568,7 +568,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6320657118814025498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1edca3e11ec4d942ac24d562f1cf1ed, type: 3}
+  m_Script: {fileID: 11500000, guid: fa457e547da414445bd9a13f0cb70109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 6320657117836873585}
@@ -914,7 +914,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartScreen
+          m_StringArgument: IntroGame
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8957146333083563734
