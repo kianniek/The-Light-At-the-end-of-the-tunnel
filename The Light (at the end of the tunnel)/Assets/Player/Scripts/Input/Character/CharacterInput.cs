@@ -13,4 +13,6 @@ public abstract class CharacterInput : MonoBehaviour
 
     public abstract bool IsJumpKeyPressed();
     public abstract bool IsSprintKeyPressed();
+
+    public abstract bool isPauseButtonPressed();
 }
