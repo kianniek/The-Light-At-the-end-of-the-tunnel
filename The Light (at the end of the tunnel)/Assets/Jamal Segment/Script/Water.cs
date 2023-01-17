@@ -7,12 +7,12 @@ public class Water : MonoBehaviour
     [SerializeField] Transform resetPosition;
     [SerializeField] PlatformBehaviour[] allPlatforms;
     [SerializeField] SoundManager[] allSounds;
+    [SerializeField] OppositeRotator OppositeRotator;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             ResetAllPlatforms();
-            //other.transform.position = resetPosition.position;
         }
     }
     void ResetAllPlatforms()
@@ -25,5 +25,6 @@ public class Water : MonoBehaviour
         {
             allSounds[i].Reset();
         }
+        OppositeRotator.activated = false;
     }
 }
