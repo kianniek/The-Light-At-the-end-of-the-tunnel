@@ -25,6 +25,7 @@ public class MovementController : Controller
 
     //Jump speed;
     public float jumpSpeed = 10f;
+    public float jumpDelay = 0f;
 
     //Jump duration variables;
     public float jumpDuration = 0.2f;

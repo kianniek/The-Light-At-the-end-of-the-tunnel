@@ -63,7 +63,7 @@ public class RotatingPipe : MonoBehaviour
         float counter = 0;
         while (counter < duration)
         {
-            counter = counter + Time.deltaTime;
+            counter += Time.deltaTime;
             float percent = Mathf.Clamp01(counter / duration);
             float curvePercent = SmoothnessCurve.Evaluate(percent);
             counter += Time.deltaTime;
