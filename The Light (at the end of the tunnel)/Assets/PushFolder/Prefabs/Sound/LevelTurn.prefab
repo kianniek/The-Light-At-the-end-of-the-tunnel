@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clip: {fileID: 8300000, guid: 8d33a6a3c6b2a4649872d81576d22a07, type: 3}
-    stopAfterSeconds: 0
-    fadeOut: 0
+    stopAfterSeconds: 2
+    fadeOut: 1
   AudioSource: {fileID: 6854944067957161138}
 --- !u!82 &6854944067957161138
 AudioSource:

@@ -12,16 +12,21 @@ public class SoundManager : MonoBehaviour
 {
     // definition of a sound for easy management
     [Serializable]
-    internal struct Sound
+    public struct Sound
     {
         public AudioClip clip;
         //[Range(0, 1)] public float volume;
         [Range(0, 100)] public float stopAfterSeconds;
         public bool fadeOut;
+        public bool Repeat;
+        public bool triggerWithPlayer;
+        public bool loop;
+        [Range(0, 10)] public int repeatTimes;
     }
+    private int repeatCounter;
 
     // all defined sounds
-    [SerializeField] private List<Sound> sounds;
+    [SerializeField] public List<Sound> sounds;
 
     // audio sources
     [SerializeField] private AudioSource AudioSource;
@@ -40,6 +45,7 @@ public class SoundManager : MonoBehaviour
     }
     private void Start()
     {
+        AudioSource.loop = sounds[0].loop;
         AudioSource.rolloffMode = AudioRolloffMode.Linear;
         if (!savedVolume)
         {
@@ -48,25 +54,53 @@ public class SoundManager : MonoBehaviour
         }
     }
 
+    private bool isPlayed = false;
     private void OnTriggerEnter(Collider other)
     {
 
-        AudioSource.volume = 0;
-        SetAndPlayMusic(0);
-        AudioSource.volume = safeVolume;
-        hasTriggered = true;
+        if (!sounds[0].triggerWithPlayer && !other.CompareTag("Player"))
+        {
+            if (!isPlayed || sounds[0].Repeat)
+            {
+                if (repeatCounter < sounds[0].repeatTimes || !isPlayed)
+                {
+                    AudioSource.volume = 0;
+                    SetAndPlayMusic(0);
+                    AudioSource.volume = safeVolume;
+                    isPlayed = true;
+                }
+            }
+        }
+        if (sounds[0].triggerWithPlayer && other.CompareTag("Player"))
+        {
+            if (!isPlayed || sounds[0].Repeat)
+            {
+                if (repeatCounter < sounds[0].repeatTimes || !isPlayed)
+                {
+                    AudioSource.volume = 0;
+                    SetAndPlayMusic(0);
+                    AudioSource.volume = safeVolume;
+                    isPlayed = true;
+                }
+            }
+        }
     }
 
     private void Update()
     {
         if (hasTriggered)
         {
+            if (!sounds[0].Repeat)
+            {
+                return;
+            }
             if (sounds[0].stopAfterSeconds != 0)
             {
                 {
                     StartCoroutine(StopPlayingAfterSeconds(sounds[0].stopAfterSeconds, sounds[0].fadeOut));
                 }
             }
+
         }
     }
     internal void OnVolumeChanged(float newVolume, bool forceUpdate = false)
@@ -108,13 +142,15 @@ public class SoundManager : MonoBehaviour
     {
         AudioSource.clip = clip;
     }
-    internal void SetAndPlayMusic(int soundIndex)
+    public void SetAndPlayMusic(int soundIndex)
     {
+        hasTriggered = true;
+        repeatCounter++;
         SetMusicClip(sounds[soundIndex].clip);
         PlayMusic(true);
     }
 
-    bool boolcheck;
+    public bool boolcheck;
     internal IEnumerator StopPlayingAfterSeconds(float playTime, bool fadeOut)
     {
         if (!boolcheck)
@@ -169,5 +205,6 @@ public class SoundManager : MonoBehaviour
         StopMusic();
         StopAllCoroutines();
         AudioSource.volume = safeVolume;
+        repeatCounter = 0;
     }
 }
