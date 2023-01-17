@@ -25,6 +25,10 @@ public class FadeController : MonoBehaviour
         {
             fadetimer = 0;
         }
+        if (fadetimer > 1)
+        {
+            fadetimer = 1;
+        }
         FadeImageIn();
     }
     public void FadeImageIn()
