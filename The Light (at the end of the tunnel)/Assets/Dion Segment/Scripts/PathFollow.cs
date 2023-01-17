@@ -11,6 +11,7 @@ public class PathFollow : MonoBehaviour
     public int current;
 
     public float speed;
+    public float rotationSpeed;
 
     private Vector3 actualPosition;
 
@@ -33,6 +34,8 @@ public class PathFollow : MonoBehaviour
 
         //Object moves to way point 
         obj.transform.position = Vector3.MoveTowards(actualPosition, wayPoints[current].transform.position, speed * Time.deltaTime);
+
+        obj.transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
 
         //Checking for new way point
         if ((actualPosition.x <= wayPoints[current].transform.position.x && actualPosition.y <= wayPoints[current].transform.position.y &&
