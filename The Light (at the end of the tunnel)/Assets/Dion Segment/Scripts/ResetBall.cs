@@ -43,8 +43,8 @@ public class ResetBall : MonoBehaviour
 
         path.current = 0;
 
-        ballSound.Reset();
-
         transform.position = resetPoint.transform.position;
+
+        ballSound.Reset();
     }
 }
