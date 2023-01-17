@@ -14,6 +14,7 @@ public class ContinueGame : MonoBehaviour
 
     public void MainMenu(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -192,6 +192,7 @@ MonoBehaviour:
   movementSpeed: 5
   airControlRate: 15
   jumpSpeed: 8
+  jumpDelay: 0
   jumpDuration: 0.2
   airFriction: 2
   groundFriction: 100
@@ -217,6 +218,7 @@ MonoBehaviour:
   verticalInputAxis: Vertical
   jumpKey: 32
   sprintKey: 304
+  pauseKey: 27
   useRawInput: 1
 --- !u!114 &3198507820939736963
 MonoBehaviour:
@@ -250,6 +252,7 @@ MonoBehaviour:
   - {fileID: 114954128155224326}
   circleWipe: {fileID: 689012498698529641}
   player: {fileID: 114507584543769724}
+  soundManager: {fileID: 0}
 --- !u!1 &1354820435992630
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 4393270441659010}
   cameraTargetTransform: {fileID: 4916773652059302}
-  castType: 0
+  castType: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 2147483647

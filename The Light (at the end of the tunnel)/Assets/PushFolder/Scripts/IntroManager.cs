@@ -24,8 +24,8 @@ public class IntroManager : MonoBehaviour
     [Range(0, 1)]
     [SerializeField] float speed;
 
-    [SerializeField] bool trigger;
-    [SerializeField] bool trigger1;
+    [SerializeField] bool trigger = false;
+    [SerializeField] bool trigger1 = false;
 
    public UnityEvent function;
     // Start is called before the first frame update
