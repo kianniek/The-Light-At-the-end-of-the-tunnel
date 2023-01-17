@@ -57,29 +57,27 @@ public class PlattformHandler : MonoBehaviour
         //Blue on
         if ((jumpCount == 0 && isJumping && player.isGrounded) || (checkpoints[1].hitCheckpoint && water[1].hitWater))
         {
-            water[1].hitWater = false;
+            Invoke("BlueActive", 0.3f);
 
-            Invoke("BlueActive", 0.4f);
+            SetHitChecksFalse();
         }
 
         //Red on
-        else if ((jumpCount == 1 && isJumping && player.isGrounded) || ((checkpoints[0].hitCheckpoint && water[0].hitWater) ||
+        if ((jumpCount == 1 && isJumping && player.isGrounded) || ((checkpoints[0].hitCheckpoint && water[0].hitWater) ||
             (checkpoints[2].hitCheckpoint && water[2].hitWater) || (checkpoints[3].hitCheckpoint && water[3].hitWater)))
         {
-            water[0].hitWater = false;
-            water[2].hitWater = false;
-            water[3].hitWater = false;
+            Invoke("RedActive", 0.3f);
 
-            Invoke("RedActive", 0.4f);
+            SetHitChecksFalse();
         }
 
         //Reset
-        if ((red && blue) || jumpCount == 2)
+        if ((red && blue) || (jumpCount == 2))
         {
             ResetCounter();
-        }
 
-        CheckCurrentCheckpoint();
+            SetHitChecksFalse();
+        }
     }
 
     private void BlueActive()
@@ -124,22 +122,17 @@ public class PlattformHandler : MonoBehaviour
         blue = false;
     }
 
-    private void CheckCurrentCheckpoint()
+    private void SetHitChecksFalse()
     {
-        //Set previous boolean hitCheckpoint to false if the player hits
-        //The next checkpoint
-        if (checkpoints[1].hitCheckpoint)
-        {
-            checkpoints[0].hitCheckpoint = false;
-        }
-        else if (checkpoints[2].hitCheckpoint)
-        {
-            checkpoints[1].hitCheckpoint = false;
-        }
-        else if (checkpoints[3].hitCheckpoint)
-        {
-            checkpoints[2].hitCheckpoint = false;
-        }
+        water[0].hitWater = false;
+        water[1].hitWater = false;
+        water[2].hitWater = false;
+        water[3].hitWater = false;
+
+        checkpoints[0].hitCheckpoint = false;
+        checkpoints[1].hitCheckpoint = false;
+        checkpoints[2].hitCheckpoint = false;
+        checkpoints[3].hitCheckpoint = false;
     }
 }
 
