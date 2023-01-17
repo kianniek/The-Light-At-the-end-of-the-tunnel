@@ -19,7 +19,6 @@ public class DeathManager : MonoBehaviour
     }
     IEnumerator RespawnTransition(float duration)
     {
-        soundManager.Reset();
         if (circleWipe == null)
         {
             circleWipe = GetComponent<CircleWipeController>();
@@ -61,6 +60,7 @@ public class DeathManager : MonoBehaviour
         yield return new WaitForSeconds(duration / steps);
 
 
+        soundManager.Reset();
         yield return null;
     }
 }

@@ -34,7 +34,6 @@ public class SoundManager : MonoBehaviour
     // current volume for all sources
     private float currentVolume;
     float safeVolume;
-    bool hasTriggered;
     bool savedVolume = false;
     bool startCountDown = false;
     internal void Initialize()
@@ -46,7 +45,7 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         AudioSource.loop = sounds[0].loop;
-        AudioSource.rolloffMode = AudioRolloffMode.Linear;
+        //AudioSource.rolloffMode = AudioRolloffMode.Linear;
         if (!savedVolume)
         {
             safeVolume = AudioSource.volume;
@@ -54,53 +53,27 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private bool isPlayed = false;
+    [SerializeField]private bool isPlayed = false;
     private void OnTriggerEnter(Collider other)
     {
 
         if (!sounds[0].triggerWithPlayer && !other.CompareTag("Player"))
         {
-            if (!isPlayed || sounds[0].Repeat)
+            if (!isPlayed || (sounds[0].Repeat && repeatCounter < sounds[0].repeatTimes))
             {
-                if (repeatCounter < sounds[0].repeatTimes || !isPlayed)
-                {
-                    AudioSource.volume = 0;
-                    SetAndPlayMusic(0);
-                    AudioSource.volume = safeVolume;
-                    isPlayed = true;
-                }
+                AudioSource.volume = safeVolume;
+                SetAndPlayMusic(0);
+                isPlayed = true;
             }
         }
         if (sounds[0].triggerWithPlayer && other.CompareTag("Player"))
         {
-            if (!isPlayed || sounds[0].Repeat)
+            if (!isPlayed || (sounds[0].Repeat && repeatCounter < sounds[0].repeatTimes))
             {
-                if (repeatCounter < sounds[0].repeatTimes || !isPlayed)
-                {
-                    AudioSource.volume = 0;
-                    SetAndPlayMusic(0);
-                    AudioSource.volume = safeVolume;
-                    isPlayed = true;
-                }
+                AudioSource.volume = safeVolume;
+                SetAndPlayMusic(0);
+                isPlayed = true;
             }
-        }
-    }
-
-    private void Update()
-    {
-        if (hasTriggered)
-        {
-            if (!sounds[0].Repeat)
-            {
-                return;
-            }
-            if (sounds[0].stopAfterSeconds != 0)
-            {
-                {
-                    StartCoroutine(StopPlayingAfterSeconds(sounds[0].stopAfterSeconds, sounds[0].fadeOut));
-                }
-            }
-
         }
     }
     internal void OnVolumeChanged(float newVolume, bool forceUpdate = false)
@@ -136,6 +109,7 @@ public class SoundManager : MonoBehaviour
     internal void StopMusic()
     {
         AudioSource.Stop();
+        isPlayed = false;
     }
 
     internal void SetMusicClip(AudioClip clip)
@@ -143,11 +117,20 @@ public class SoundManager : MonoBehaviour
         AudioSource.clip = clip;
     }
     public void SetAndPlayMusic(int soundIndex)
-    {
-        hasTriggered = true;
+    { 
         repeatCounter++;
         SetMusicClip(sounds[soundIndex].clip);
-        PlayMusic(true);
+
+        if(sounds[soundIndex].stopAfterSeconds > 0)
+        {
+            PlayMusic(true);
+            StartCoroutine(StopPlayingAfterSeconds(sounds[soundIndex].stopAfterSeconds, sounds[soundIndex].fadeOut));
+        }
+        else
+        {
+            PlayMusic(true);
+            isPlayed = false;
+        }
     }
 
     public bool boolcheck;
@@ -206,5 +189,6 @@ public class SoundManager : MonoBehaviour
         StopAllCoroutines();
         AudioSource.volume = safeVolume;
         repeatCounter = 0;
+        isPlayed = false;
     }
 }

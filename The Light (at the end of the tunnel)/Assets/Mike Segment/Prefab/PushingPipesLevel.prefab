@@ -55,8 +55,13 @@ MonoBehaviour:
   player: {fileID: 0}
   water:
   - {fileID: 8816251661598479941}
+  - {fileID: 8816251661598479941}
+  - {fileID: 8816251661598479941}
+  - {fileID: 8816251661598479941}
   checkpoints:
   - {fileID: 5556157036149749496}
+  - {fileID: 5556157035939603973}
+  - {fileID: 5556157035939603973}
   - {fileID: 5556157035939603973}
   red: 0
   blue: 0
