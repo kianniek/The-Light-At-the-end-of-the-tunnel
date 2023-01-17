@@ -12,6 +12,8 @@ public class ResetBall : MonoBehaviour
 
     public GameObject resetPoint;
 
+    [SerializeField] SoundManager ballSound;
+
     //Resetting ball
     private void OnTriggerEnter(Collider other)
     {
@@ -40,6 +42,8 @@ public class ResetBall : MonoBehaviour
         hitWater = false;
 
         path.current = 0;
+
+        ballSound.Reset();
 
         transform.position = resetPoint.transform.position;
     }

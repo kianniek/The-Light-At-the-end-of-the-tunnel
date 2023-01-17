@@ -12,13 +12,14 @@ public class DeathManager : MonoBehaviour
     private readonly int steps = 3;
     [SerializeField] CircleWipeController circleWipe;
     [SerializeField] Mover player;
-
+    [SerializeField] SoundManager soundManager;
     public void InitiateDeathDuration(float duration)
     {
         StartCoroutine(RespawnTransition(duration));
     }
     IEnumerator RespawnTransition(float duration)
     {
+        soundManager.Reset();
         if (circleWipe == null)
         {
             circleWipe = GetComponent<CircleWipeController>();

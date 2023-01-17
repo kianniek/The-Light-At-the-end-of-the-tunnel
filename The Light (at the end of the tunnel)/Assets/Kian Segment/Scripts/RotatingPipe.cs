@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotatingPipe : MonoBehaviour
 {
+    [SerializeField] SoundManager rotatingSound;
     [SerializeField] bool constantRotation = false;
     [SerializeField] float rotationSpeed = 10;
     [SerializeField] float waitTime = 3;
@@ -20,6 +21,7 @@ public class RotatingPipe : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(rotationCheckpoints[0]);
             StartCoroutine(RotateUsingCheckpoints(duration));
+
         }
     }
 
@@ -31,16 +33,15 @@ public class RotatingPipe : MonoBehaviour
 
     IEnumerator RotateUsingCheckpoints(float duration)
     {
+
         while (true)
         {
             //Rotate
             yield return RotateObject(gameObject, rotationCheckpoints[0], duration);
-
             //Wait?
             yield return new WaitForSeconds(waitTime);
             //Rotates
             yield return RotateObject(gameObject, rotationCheckpoints[1], duration);
-
             //Wait?
             yield return new WaitForSeconds(waitTime);
         }

@@ -8,9 +8,8 @@ TagManager:
   - OutOfStomach
   - Bullet
   - Platform
-  tags:
-  - PathFollowObject
   - Water
+  - PathFollowObject
   layers:
   - Default
   - TransparentFX
@@ -23,8 +22,8 @@ TagManager:
   - 
   - 
   - PlatformLayer
-  - 
-  - 
+  - Level
+  - Player
   - 
   - 
   - 

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlattformHandler : MonoBehaviour
 {
+    [SerializeField] SoundManager soundManager;
+    
+
     public GameObject[] redPlattforms;
     public GameObject[] bluePlattforms;
 
@@ -38,7 +41,6 @@ public class PlattformHandler : MonoBehaviour
     void Update()
     {
         HandlePlattforms();
-
         //Debug.Log(jumpCount);
     }
 
@@ -82,6 +84,8 @@ public class PlattformHandler : MonoBehaviour
 
     private void BlueActive()
     {
+        PlaySound();
+
         blue = true;
 
         jumpCount = 1;
@@ -99,6 +103,8 @@ public class PlattformHandler : MonoBehaviour
 
     private void RedActive()
     {
+        PlaySound();
+
         red = true;
 
         jumpCount = 2;
@@ -133,6 +139,10 @@ public class PlattformHandler : MonoBehaviour
         checkpoints[1].hitCheckpoint = false;
         checkpoints[2].hitCheckpoint = false;
         checkpoints[3].hitCheckpoint = false;
+    }
+    private void PlaySound()
+    {
+        soundManager.SetAndPlayMusic(0);
     }
 }
 
