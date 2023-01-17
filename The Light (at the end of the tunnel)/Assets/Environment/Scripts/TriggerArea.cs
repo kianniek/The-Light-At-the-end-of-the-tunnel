@@ -8,7 +8,7 @@ public class TriggerArea : MonoBehaviour, ISerializationCallbackReceiver
 {
     public HashSet<Rigidbody> rigidbodiesInTriggerArea = new();
 
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
     // private field to ensure serialization
     [SerializeField]
     private List<Rigidbody> rigidbodiesInTriggerAreaEditor = new List<Rigidbody>();
@@ -33,7 +33,7 @@ public class TriggerArea : MonoBehaviour, ISerializationCallbackReceiver
         }
     }
     //Check
-#endif
+//#endif
 
     //Check if the collider that just entered the trigger has a rigidbody (and a mover) attached and add it to the list;
     void OnTriggerEnter(Collider col)
