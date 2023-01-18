@@ -38,7 +38,7 @@ public class PlattformHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         HandlePlattforms();
         //Debug.Log(jumpCount);
