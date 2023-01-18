@@ -15,12 +15,14 @@ public class DeathManager : MonoBehaviour
     [SerializeField] CircleWipeController circleWipe;
     [SerializeField] Mover player;
     [SerializeField] SoundManager soundManager;
+    public static bool IsDying;
     public void InitiateDeathDuration(float duration)
     {
         StartCoroutine(RespawnTransition(duration));
     }
     IEnumerator RespawnTransition(float duration)
     {
+        IsDying = true;
         if (deathSound && sourceDeath)
         {
             sourceDeath.clip = deathSound;
@@ -69,6 +71,7 @@ public class DeathManager : MonoBehaviour
 
 
         soundManager.Reset();
+        IsDying = false;
         yield return null;
     }
 }
