@@ -6,12 +6,13 @@ public class HandlePause : MonoBehaviour
 {
     [SerializeField] CharacterInput playerInput;
     [SerializeField] GameObject PauseMenu;
+    [SerializeField] CutsceneBeginGame cutscene;
     public static bool pauseOpen;
 
     // Update is called once per frame
     void Update()
     {
-        if (playerInput.isPauseButtonPressed() && !DeathManager.IsDying)
+        if (playerInput.isPauseButtonPressed() && !DeathManager.IsDying && !cutscene.startCutscene)
         {
             Pause();
         }
