@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ResetBall : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class ResetBall : MonoBehaviour
     private bool hitWater;
 
     public GameObject resetPoint;
+
+    public UnityEvent executeFunction;
 
     [SerializeField] SoundManager ballSound;
 
@@ -33,7 +36,7 @@ public class ResetBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.position = DeathManager.resetPosition;
+            executeFunction.Invoke();
         }
     }
 
