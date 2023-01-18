@@ -24,6 +24,7 @@ public class FadeController : MonoBehaviour
         if (fadetimer < 0)
         {
             fadetimer = 0;
+            StopCoroutine(FadeControls());
         }
         if (fadetimer > 1)
         {
@@ -33,7 +34,7 @@ public class FadeController : MonoBehaviour
     }
     IEnumerator FadeControls()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         fadetimer += fadeinMultiplier * Time.deltaTime;
         yield return null;
     }
