@@ -48,9 +48,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clip: {fileID: 8300000, guid: 8d33a6a3c6b2a4649872d81576d22a07, type: 3}
-    stopAfterSeconds: 2
-    fadeOut: 1
+    stopAfterSeconds: 1.5
+    fadeOut: 0
+    Repeat: 0
+    triggerWithPlayer: 1
+    loop: 0
+    repeatTimes: 0
   AudioSource: {fileID: 6854944067957161138}
+  isPlayed: 0
+  boolcheck: 1
 --- !u!82 &6854944067957161138
 AudioSource:
   m_ObjectHideFlags: 0
@@ -63,7 +69,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.195
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -72,9 +78,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 2
+  MaxDistance: 20
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -107,7 +113,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -122,7 +128,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -158,5 +164,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.285904, y: 1, z: 2.9470663}
+  m_Center: {x: -0.1721878, y: 0, z: 0.1640343}

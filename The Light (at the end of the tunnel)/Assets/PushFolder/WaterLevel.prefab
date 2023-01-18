@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3228301510853099004}
   - component: {fileID: 3228301510853098978}
   - component: {fileID: 3228301510853099000}
+  - component: {fileID: 58862499500367757}
   m_Layer: 0
   m_Name: WaterLevel
   m_TagString: Untagged
@@ -150,3 +151,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  allSounds: []
+  OppositeRotator: {fileID: 0}
+--- !u!114 &58862499500367757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3228301510853098979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e2895d347b4dd14e9a742044907083e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OuterPointSet: 1
+  OuterPoint: {x: -120.17662, y: 0.13000011, z: -1}
+  OuterPointDistance: 654.06854
+  isHollow: 1
+  InnerPointSet: 0
+  InnerPoint: {x: 0, y: 0, z: 0}
+  InnerPointDistance: 0
+  InnerPointInside: 0
+  meshCollider: {fileID: 3228301510853099004}
+  meshFilter: {fileID: 3228301510853099006}
+  mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  meshUpdateInterval: -1
+  raySeparation: 0.1
+  tree:
+    Nodes: []
+    Triangles: []

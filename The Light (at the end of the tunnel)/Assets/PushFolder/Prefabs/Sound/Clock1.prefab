@@ -48,8 +48,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - clip: {fileID: 8300000, guid: bb5f8f19c6c31c2408c3d9d9c724daa4, type: 3}
-    volume: 1
+    stopAfterSeconds: 0
+    fadeOut: 0
+    Repeat: 0
+    triggerWithPlayer: 0
+    loop: 0
+    repeatTimes: 0
   AudioSource: {fileID: 118678178131137610}
+  boolcheck: 0
 --- !u!82 &118678178131137610
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61,8 +67,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.002
   m_Pitch: 1
   Loop: 0
   Mute: 0

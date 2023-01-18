@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 3b39bc05d4963c849ad0c2c5907bdb03
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: VA_Forcefield
+    100002: VA_ForcefieldPosts
+    100004: VA_Grass
+    100006: VA_Mud
+    100008: VA_Pipe
+    100010: VA_PipePosts
+    100012: VA_PowerLinePylons
+    100014: VA_PowerLineWireA
+    100016: VA_PowerLineWireB
+    100018: //RootNode
+    100020: VA_Sewer
+    100022: VA_TurbinePost
+    100024: VA_TurbinePropellor
+    100026: VA_Water
+    100028: Box001
+    100030: VA_PylonPosts
+    100032: VA_PylonWireA
+    100034: VA_PylonWireB
+    400000: VA_Forcefield
+    400002: VA_ForcefieldPosts
+    400004: VA_Grass
+    400006: VA_Mud
+    400008: VA_Pipe
+    400010: VA_PipePosts
+    400012: VA_PowerLinePylons
+    400014: VA_PowerLineWireA
+    400016: VA_PowerLineWireB
+    400018: //RootNode
+    400020: VA_Sewer
+    400022: VA_TurbinePost
+    400024: VA_TurbinePropellor
+    400026: VA_Water
+    400028: Box001
+    400030: VA_PylonPosts
+    400032: VA_PylonWireA
+    400034: VA_PylonWireB
+    2100000: No Name
+    2300000: VA_Forcefield
+    2300002: VA_ForcefieldPosts
+    2300004: VA_Grass
+    2300006: VA_Mud
+    2300008: VA_Pipe
+    2300010: VA_PipePosts
+    2300012: VA_PowerLinePylons
+    2300014: VA_PowerLineWireA
+    2300016: VA_PowerLineWireB
+    2300018: VA_Sewer
+    2300020: VA_TurbinePost
+    2300022: VA_TurbinePropellor
+    2300024: VA_Water
+    2300026: //RootNode
+    2300028: Box001
+    2300030: VA_PylonPosts
+    2300032: VA_PylonWireA
+    2300034: VA_PylonWireB
+    3300000: VA_Forcefield
+    3300002: VA_ForcefieldPosts
+    3300004: VA_Grass
+    3300006: VA_Mud
+    3300008: VA_Pipe
+    3300010: VA_PipePosts
+    3300012: VA_PowerLinePylons
+    3300014: VA_PowerLineWireA
+    3300016: VA_PowerLineWireB
+    3300018: VA_Sewer
+    3300020: VA_TurbinePost
+    3300022: VA_TurbinePropellor
+    3300024: VA_Water
+    3300026: //RootNode
+    3300028: Box001
+    3300030: VA_PylonPosts
+    3300032: VA_PylonWireA
+    3300034: VA_PylonWireB
+    4300000: VA_Grass
+    4300002: VA_Water
+    4300004: VA_Mud
+    4300006: VA_PowerLinePylons
+    4300008: VA_PowerLineWireB
+    4300010: VA_PowerLineWireA
+    4300012: VA_ForcefieldPosts
+    4300014: VA_Forcefield
+    4300016: VA_Pipe
+    4300018: VA_TurbinePost
+    4300020: VA_TurbinePropellor
+    4300022: VA_Sewer
+    4300024: VA_PipePosts
+    4300026: Box001
+    4300028: VA_PylonPosts
+    4300030: VA_PylonWireA
+    4300032: VA_PylonWireB
+    6400000: VA_Forcefield
+    6400002: VA_ForcefieldPosts
+    6400004: VA_Grass
+    6400006: VA_Mud
+    6400008: VA_Pipe
+    6400010: VA_PipePosts
+    6400012: VA_PowerLinePylons
+    6400014: VA_PowerLineWireA
+    6400016: VA_PowerLineWireB
+    6400018: VA_Sewer
+    6400020: VA_TurbinePost
+    6400022: VA_TurbinePropellor
+    6400024: VA_Water
+    6400026: //RootNode
+    6400028: Box001
+    6400030: VA_PylonPosts
+    6400032: VA_PylonWireA
+    6400034: VA_PylonWireB
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

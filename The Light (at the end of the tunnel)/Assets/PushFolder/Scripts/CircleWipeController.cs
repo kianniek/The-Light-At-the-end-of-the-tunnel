@@ -19,9 +19,9 @@ public class CircleWipeController : MonoBehaviour
     [Range(0, RADIUS)]
     public float radius = 0f;
 
-    public float horizontal = 16;
+    [HideInInspector]public float horizontal = 16;
 
-    public float verical = 9;
+    [HideInInspector]public float verical = 9;
 
     public float fadeOutduration = 1f;
     public float fadeInduration = 1f;
@@ -80,6 +80,8 @@ public class CircleWipeController : MonoBehaviour
 
     public void UpdateShader()
     {
+        horizontal = Screen.width;
+        verical = Screen.height;
         var radiusSpeed = Mathf.Max(horizontal, verical);
         material.SetFloat("_Horizontal", horizontal);
         material.SetFloat("_Vertical", verical);
