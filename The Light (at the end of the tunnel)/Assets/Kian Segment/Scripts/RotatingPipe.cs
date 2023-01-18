@@ -80,7 +80,7 @@ public class RotatingPipe : MonoBehaviour
             float percent = Mathf.Clamp01(counter / duration);
             float curvePercent = SmoothnessCurve.Evaluate(percent);
             counter += Time.deltaTime;
-            rotatingsource.BaseVolume = curvePercent;
+            rotatingsource.BaseVolume = 1 - curvePercent;
             gameObjectToMove.transform.rotation = Quaternion.LerpUnclamped(currentRot, newRot, curvePercent);
             yield return null;
         }
