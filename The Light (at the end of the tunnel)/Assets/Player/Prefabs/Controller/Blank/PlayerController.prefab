@@ -659,7 +659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: b0d1ccff3b4b5464abcf59e16390c4d7, type: 3}
   radius: 2
-  horizontal: 715
+  horizontal: 541
   verical: 947
   fadeOutduration: 0.2
   fadeInduration: 0.8
@@ -681,7 +681,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4393270441659010}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 8192
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 2
