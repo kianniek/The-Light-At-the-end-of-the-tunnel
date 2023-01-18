@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39f988efb5ed5e47ba993ef8f5f3848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCutscnene: 0
+  startCutscnene: 1
   positions:
   - posCamCutscene: {fileID: 5506113529104903033}
     cameraLookat: {fileID: 5506113529093512246}

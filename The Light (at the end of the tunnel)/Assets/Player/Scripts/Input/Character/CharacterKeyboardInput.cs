@@ -9,6 +9,7 @@ public class CharacterKeyboardInput : CharacterInput
     public string verticalInputAxis = "Vertical";
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode sprintKey = KeyCode.LeftShift;
+    public KeyCode pauseKey = KeyCode.Escape;
 
     //If this is enabled, Unity's internal input smoothing is bypassed;
     public bool useRawInput = true;
@@ -38,4 +39,9 @@ public class CharacterKeyboardInput : CharacterInput
     {
         return Input.GetKey(sprintKey);
     }
+    public override bool isPauseButtonPressed()
+    {
+        return Input.GetKey(pauseKey);
+    }
+
 }

@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VolumetricAudio;
 
 public class RotatingPipe : MonoBehaviour
 {
     [SerializeField] SoundManager rotatingSound;
+    [SerializeField] VA_AudioSource rotatingsource;
     [SerializeField] bool constantRotation = false;
     [SerializeField] float rotationSpeed = 10;
     [SerializeField] float waitTime = 3;
@@ -26,9 +28,20 @@ public class RotatingPipe : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
+        if (rotatingSound.gameObject.activeInHierarchy)
+        {
 
+            if (IsRotating() && !rotatingSound.GetMusicIsPlaying())
+            {
+                rotatingSound.SetAndPlayMusic(0);
+            }
+            if (!IsRotating())
+            {
+                rotatingSound.StopMusic();
+            }
+        }
     }
 
     IEnumerator RotateUsingCheckpoints(float duration)
@@ -63,13 +76,19 @@ public class RotatingPipe : MonoBehaviour
         float counter = 0;
         while (counter < duration)
         {
-            counter = counter + Time.deltaTime;
+            counter += Time.deltaTime;
             float percent = Mathf.Clamp01(counter / duration);
             float curvePercent = SmoothnessCurve.Evaluate(percent);
             counter += Time.deltaTime;
+            rotatingsource.BaseVolume = curvePercent;
             gameObjectToMove.transform.rotation = Quaternion.LerpUnclamped(currentRot, newRot, curvePercent);
             yield return null;
         }
         rotating = false;
+    }
+
+    public bool IsRotating()
+    {
+        return rotating;
     }
 }

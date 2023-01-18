@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlattformHandler : MonoBehaviour
 {
     [SerializeField] SoundManager soundManager;
-    
+
 
     public GameObject[] redPlattforms;
     public GameObject[] bluePlattforms;
@@ -65,8 +65,8 @@ public class PlattformHandler : MonoBehaviour
         }
 
         //Red on
-        if ((jumpCount == 1 && isJumping && player.isGrounded) || ((checkpoints[0].hitCheckpoint && water[0].hitWater) ||
-            (checkpoints[2].hitCheckpoint && water[2].hitWater) || (checkpoints[3].hitCheckpoint && water[3].hitWater)))
+        if ((jumpCount == 1 && isJumping && player.isGrounded) || (checkpoints[0].hitCheckpoint && water[0].hitWater) ||
+            (checkpoints[2].hitCheckpoint && water[2].hitWater) || (checkpoints[3].hitCheckpoint && water[3].hitWater))
         {
             Invoke("RedActive", 0.3f);
 
@@ -76,7 +76,7 @@ public class PlattformHandler : MonoBehaviour
         //Reset
         if ((red && blue) || (jumpCount == 2))
         {
-            ResetCounter();
+            Invoke("ResetCounter", 0.3f);
 
             SetHitChecksFalse();
         }
@@ -142,7 +142,10 @@ public class PlattformHandler : MonoBehaviour
     }
     private void PlaySound()
     {
-        soundManager.SetAndPlayMusic(0);
+        if (soundManager.gameObject.activeInHierarchy)
+        {
+            soundManager.SetAndPlayMusic(0);
+        }
     }
 }
 

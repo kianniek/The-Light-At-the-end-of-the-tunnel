@@ -50,7 +50,12 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 771296b5b43fb3a45b96659f2adb06ca, type: 3}
     stopAfterSeconds: 0
     fadeOut: 0
+    Repeat: 0
+    triggerWithPlayer: 0
+    loop: 0
+    repeatTimes: 0
   AudioSource: {fileID: 2125348642071112322}
+  boolcheck: 0
 --- !u!82 &2125348642071112322
 AudioSource:
   m_ObjectHideFlags: 0
@@ -62,7 +67,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.195
   m_Pitch: 1
   Loop: 0

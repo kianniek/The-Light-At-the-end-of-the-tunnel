@@ -31,13 +31,13 @@ public class MouseCursorLock : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(unlockKeyCode))
+        if (Input.GetKeyDown(unlockKeyCode) && HandlePause.pauseOpen)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
 
-        if (Input.GetKeyDown(lockKeyCode))
+        if (Input.GetKeyDown(lockKeyCode) && !HandlePause.pauseOpen)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

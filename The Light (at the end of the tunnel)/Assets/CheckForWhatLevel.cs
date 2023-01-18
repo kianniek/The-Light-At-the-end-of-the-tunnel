@@ -58,6 +58,30 @@ public class CheckForWhatLevel : MonoBehaviour
             Casper();
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == dionCollider.name)
+        {
+            dionSounds.SetActive(false);
+        }
+        if (other.name == jamalCollider.name)
+        {
+            jamalSounds.SetActive(false);
+        }
+        if (other.name == mikeCollider.name)
+        {
+            mikeSounds.SetActive(false);
+        }
+        if (other.name == kianCollider.name)
+        {
+            kianSounds.SetActive(false);
+        }
+        if (other.name == casperCollider.name)
+        {
+            casperSounds.SetActive(false);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -65,32 +89,27 @@ public class CheckForWhatLevel : MonoBehaviour
 
     private void Casper()
     {
-        AllSoundsInactive();
         casperSounds.SetActive(true);
         clockTick.transform.position = player.transform.position;
     }
 
     private void Kian()
     {
-        AllSoundsInactive();
         kianSounds.SetActive(true);
         clockTick.transform.position = player.transform.position;
     }
 
     private void Mike()
     {
-        AllSoundsInactive();
         mikeSounds.SetActive(true);
     }
 
     private void Jamal()
     {
-        AllSoundsInactive();
         jamalSounds.SetActive(true);
     }
     private void Dion()
     {
-        AllSoundsInactive();
         dionSounds.SetActive(true);
         levelSwitchSound.transform.position = player.transform.position;
     }
