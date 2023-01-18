@@ -6,22 +6,22 @@ using UnityEngine.UI;
 public class FadeController : MonoBehaviour
 {
     [SerializeField] Image image;
-     float fadetimer;
+    float fadetimer;
     [SerializeField] float fadeinMultiplier = 0.05f;
     [SerializeField] float fadeoutMultiplier = 0.1f;
     [SerializeField] MovementController playerMovement;
 
     private void Update()
     {
-        if(playerMovement.GetVelocity() == Vector3.zero)
+        if (playerMovement.GetVelocity() == Vector3.zero)
         {
-            fadetimer += fadeinMultiplier * Time.deltaTime;
+            StartCoroutine(FadeControls());
         }
         else
         {
             fadetimer -= fadeoutMultiplier * Time.deltaTime;
         }
-        if(fadetimer < 0)
+        if (fadetimer < 0)
         {
             fadetimer = 0;
         }
@@ -30,6 +30,12 @@ public class FadeController : MonoBehaviour
             fadetimer = 1;
         }
         FadeImageIn();
+    }
+    IEnumerator FadeControls()
+    {
+        yield return new WaitForSeconds(5f);
+        fadetimer += fadeinMultiplier * Time.deltaTime;
+        yield return null;
     }
     public void FadeImageIn()
     {
