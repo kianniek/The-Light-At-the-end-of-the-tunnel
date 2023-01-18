@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlattformHandler : MonoBehaviour
 {
     [SerializeField] SoundManager soundManager;
-    
+
 
     public GameObject[] redPlattforms;
     public GameObject[] bluePlattforms;
@@ -74,7 +74,7 @@ public class PlattformHandler : MonoBehaviour
         }
 
         //Reset
-        if ((red && blue) ||(jumpCount == 2))
+        if ((red && blue) || (jumpCount == 2))
         {
             Invoke("ResetCounter", 0.3f);
 
@@ -142,7 +142,10 @@ public class PlattformHandler : MonoBehaviour
     }
     private void PlaySound()
     {
-        soundManager.SetAndPlayMusic(0);
+        if (soundManager.gameObject.activeInHierarchy)
+        {
+            soundManager.SetAndPlayMusic(0);
+        }
     }
 }
 

@@ -50,11 +50,12 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 48a36642b4de25049abd3a9939603415, type: 3}
     stopAfterSeconds: 0
     fadeOut: 0
-    Repeat: 1
+    Repeat: 0
     triggerWithPlayer: 0
     loop: 0
-    repeatTimes: 1
+    repeatTimes: 0
   AudioSource: {fileID: 7849916056930525462}
+  isPlayed: 0
   boolcheck: 0
 --- !u!82 &7849916056930525462
 AudioSource:

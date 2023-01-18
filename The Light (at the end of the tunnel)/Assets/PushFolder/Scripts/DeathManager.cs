@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DeathManager : MonoBehaviour
 {
+    [SerializeField]AudioClip deathSound;
+    [SerializeField] AudioSource sourceDeath;
     public static Vector3 resetPosition;
 
     [SerializeField] MonoBehaviour[] scriptsToDisable;
@@ -19,6 +21,12 @@ public class DeathManager : MonoBehaviour
     }
     IEnumerator RespawnTransition(float duration)
     {
+        if (deathSound && sourceDeath)
+        {
+            sourceDeath.clip = deathSound;
+            sourceDeath.Play();
+            duration = sourceDeath.clip.length;
+        }
         if (circleWipe == null)
         {
             circleWipe = GetComponent<CircleWipeController>();
