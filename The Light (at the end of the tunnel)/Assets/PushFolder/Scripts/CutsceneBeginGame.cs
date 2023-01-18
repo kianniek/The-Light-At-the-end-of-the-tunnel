@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CutsceneBeginGame : MonoBehaviour
 {
-    public bool startCutscnene;
+    public bool startCutscene;
 
     Vector3 startCamPos;
     Quaternion startCamRot;
@@ -125,11 +125,12 @@ public class CutsceneBeginGame : MonoBehaviour
         camSmoothPos.lerpSpeed = camSmoothPosLerpSave;
         playerController.enabled = true;
         playerMover.enabled = true;
+        startCutscene = false;
         yield return null;
     }
 
     bool StartGame()
     {
-        return startCutscnene;
+        return startCutscene;
     }
 }
