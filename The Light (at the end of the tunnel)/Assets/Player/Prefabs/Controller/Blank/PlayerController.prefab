@@ -469,8 +469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   lerpSpeed: 20
-  smoothDampTime: 0.04
-  extrapolatePosition: 0
+  smoothDampTime: 0.2
+  extrapolatePosition: 1
   updateType: 0
   smoothType: 1
   useTargetAsOffset: 0
