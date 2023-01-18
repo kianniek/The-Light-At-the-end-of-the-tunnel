@@ -4064,7 +4064,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8101225469500228552}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: bc5a9c054e54ee64caeeece6e6d40cb9, type: 2}
 --- !u!23 &8101225469500228550
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4334,9 +4334,9 @@ MonoBehaviour:
     m_AngleError: 8
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
-  assetGuid: 
-  m_Mesh: {fileID: 0}
-  m_VersionIndex: 373
+  assetGuid: 6fd40b19f8f642e0a05b31ba6593c435
+  m_Mesh: {fileID: 4300000, guid: bc5a9c054e54ee64caeeece6e6d40cb9, type: 2}
+  m_VersionIndex: 388
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -4583,6 +4583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: lightBulb
       objectReference: {fileID: 0}
+    - target: {fileID: 415435625042068391, guid: d4c3cf71f0bd2174888daffe114c41e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 651062782762691917, guid: d4c3cf71f0bd2174888daffe114c41e2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4732,7 +4736,7 @@ PrefabInstance:
     - target: {fileID: 8600014134485298629, guid: 2a9fd3388d520a14b9e44081f4584764, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4300000, guid: a8382b355546d484bafad66e6dfa81e5, type: 2}
     - target: {fileID: 8609739965320171035, guid: 2a9fd3388d520a14b9e44081f4584764, type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 2
@@ -4811,8 +4815,8 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 0}
-  m_VersionIndex: 66
+  m_Mesh: {fileID: 4300000, guid: a8382b355546d484bafad66e6dfa81e5, type: 2}
+  m_VersionIndex: 81
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
