@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02151786, g: 0.021489102, b: 0.02151786, a: 1}
+  m_IndirectSpecularColor: {r: 0.021521034, g: 0.021491436, b: 0.021521034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11066,6 +11066,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 821397791173172451, guid: 0191f5bda19fab147aebff2e2d1446ed, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 918453423}
+    - target: {fileID: 821397791173172451, guid: 0191f5bda19fab147aebff2e2d1446ed, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitiateDeathDuration
+      objectReference: {fileID: 0}
     - target: {fileID: 821397791378353368, guid: 0191f5bda19fab147aebff2e2d1446ed, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -18595,8 +18603,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.831727, y: 2.3998938, z: 9.950766}
-  m_Center: {x: 0.9158634, y: 0.699947, z: 0.18402652}
+  m_Size: {x: 0.6072351, y: 2.3998938, z: 9.950766}
+  m_Center: {x: 2.0281096, y: 0.699947, z: 0.18402652}
 --- !u!114 &1338106260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18609,9 +18617,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90fd592eb9daf54b8cb6e3e26f7c105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  THELIGHT: {fileID: 2659276534346022803}
+  endcollider: {fileID: 1350804632}
   shatter: {fileID: 1641062764703436183}
   flicky: {fileID: 5954872785992980228}
   clocky: {fileID: 5801036935567716257}
+  EndingSceneName: EndGame
+  BlackScreen: {fileID: 1617857307}
 --- !u!114 &1341006391 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2844608995558440588, guid: 0191f5bda19fab147aebff2e2d1446ed, type: 3}
@@ -18659,6 +18671,51 @@ Transform:
   m_Father: {fileID: 222230639}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1350804632
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1350804633}
+  - component: {fileID: 1350804634}
+  m_Layer: 0
+  m_Name: EndCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1350804633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350804632}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.82, y: 1.673, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4887379592516846605}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1350804634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350804632}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3005772, y: 0.2079551, z: 8.757311}
+  m_Center: {x: -1.1502885, y: 0.39602256, z: -0.9209373}
 --- !u!1001 &1358021148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20264,6 +20321,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 438f8377ffcfe1647b8c48dbe6e40012, type: 3}
+--- !u!1 &1617857307 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1713324148152264161, guid: 819f37b0649503d4ba55301216a64d1a, type: 3}
+  m_PrefabInstance: {fileID: 7158213692645939399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1619024622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25844,7 +25906,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a354d52a3febfba4c90ba8106f1361da, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -26058,6 +26120,7 @@ Transform:
   - {fileID: 1957069686181534122}
   - {fileID: 2766319426034300810}
   - {fileID: 574937665}
+  - {fileID: 1350804633}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
@@ -26270,7 +26333,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   volume: 1
-  baseVolume: 0.3
+  baseVolume: 0.02
   zone: {fileID: 0}
   fade: 0
   fadeMinDistance: 0
