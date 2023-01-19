@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.021521034, g: 0.021491436, b: 0.021521034, a: 1}
+  m_IndirectSpecularColor: {r: 0.02151786, g: 0.021489102, b: 0.02151786, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3937,6 +3937,26 @@ PrefabInstance:
       propertyPath: ballSound
       value: 
       objectReference: {fileID: 1929845096}
+    - target: {fileID: 5886322637819560385, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322637819560385, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 918453423}
+    - target: {fileID: 5886322637819560385, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitiateDeathDuration
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322637819560385, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322637819560385, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5886322637873916002, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
       propertyPath: player
       value: 
@@ -4033,10 +4053,66 @@ PrefabInstance:
       propertyPath: ballSound
       value: 
       objectReference: {fileID: 1556707431}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 918453423}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitiateDeathDuration
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638585975874, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
       propertyPath: ballSound
       value: 
       objectReference: {fileID: 984726840}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 918453423}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitiateDeathDuration
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322638688105761, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5886322638731021152, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4053,6 +4129,34 @@ PrefabInstance:
       propertyPath: ballSound
       value: 
       objectReference: {fileID: 1929845096}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 918453423}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InitiateDeathDuration
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DeathManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5886322639145153089, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
+      propertyPath: executeFunction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5886322639449941701, guid: 1d47f3394c6fa4146bed221b110eee4c, type: 3}
       propertyPath: m_Mesh
       value: 
