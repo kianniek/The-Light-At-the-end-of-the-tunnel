@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1661
+  controlID: 9942
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1662
+  controlID: 9943
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1663
+  controlID: 9944
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 92890000
-      m_LastClickedID: 35218
-      m_ExpandedIDs: 22f4feff08fbffff
+      m_SelectedIDs: 42cdfeff
+      m_LastClickedID: -78526
+      m_ExpandedIDs: 8cd0feff22f4feff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -502,9 +502,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 192.2, y: 2.9499989, z: -0.19999999}
+    m_Target: {x: 675.88, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 145.88686, y: 7.796459, z: -4.429245}
+    m_Value: {x: 814.28, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -551,13 +551,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14260364, y: -0.13804673, z: 0.020932574, w: 0.9800867}
+    m_Target: {x: 0.2659193, y: 0.009831826, z: -0.0017998035, w: 0.9641587}
     speed: 2
-    m_Value: {x: 0.14257507, y: -0.13801907, z: 0.02092838, w: 0.97989035}
+    m_Value: {x: 0.26586416, y: 0.009829788, z: -0.0017994302, w: 0.96395874}
   m_Size:
-    m_Target: 1.2957323
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 1.2399352
+    m_Value: 199.70139
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -650,23 +650,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Kian Segment/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Kian Segment/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\diond\OneDrive\Documents\Unity\Kopie_The_Light\the-light-at-the-end-of-the-tunnel\The
     Light (at the end of the tunnel)
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 485.40002}
-    m_SelectedIDs: ee720000
-    m_LastClickedID: 29422
-    m_ExpandedIDs: 00000000d4720000d6720000d8720000da720000dc720000de720000e0720000e2720000e4720000e6720000ec72000000ca9a3b
+    scrollPos: {x: 0, y: 479}
+    m_SelectedIDs: 62280100
+    m_LastClickedID: 75874
+    m_ExpandedIDs: 00000000d4720000d6720000d8720000da720000dc720000de720000e0720000e2720000e4720000e6720000ec7200001473000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -694,7 +694,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d4720000d6720000d8720000da720000dc720000de720000e0720000e2720000e4720000e672000000ca9a3b
+    m_ExpandedIDs: 00000000d4720000d6720000d8720000da720000dc720000de720000e0720000e2720000e4720000e67200001473000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -719,8 +719,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 92890000
-    m_LastClickedInstanceID: 35218
+    m_SelectedInstanceIDs: 42cdfeff
+    m_LastClickedInstanceID: -78526
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -772,7 +772,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 488.80002
-    width: 1225.4
+    width: 1223
     height: 286.59998
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -839,7 +839,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 816.80005
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

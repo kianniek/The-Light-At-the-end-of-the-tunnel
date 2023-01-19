@@ -6600,6 +6600,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 247
       objectReference: {fileID: 0}
+    - target: {fileID: 6318433399488580964, guid: 73c572ec65328be47866c4262c5bf23f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6531902881942945226, guid: 73c572ec65328be47866c4262c5bf23f, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11010,6 +11014,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e2895d347b4dd14e9a742044907083e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1130470242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3802550244688060874, guid: 73c572ec65328be47866c4262c5bf23f, type: 3}
+  m_PrefabInstance: {fileID: 335405432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1130470246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130470242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.62505955, y: 0.62505955, z: 0.62505955}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1143003752
 PrefabInstance:
   m_ObjectHideFlags: 0
