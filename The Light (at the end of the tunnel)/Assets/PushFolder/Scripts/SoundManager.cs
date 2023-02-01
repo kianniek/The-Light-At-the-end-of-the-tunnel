@@ -56,7 +56,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private bool isPlayed = false;
     private void OnTriggerEnter(Collider other)
     {
-
+        //if we dont want the player to trigger the sound look for anything but the player
         if (!sounds[0].triggerWithPlayer && !other.CompareTag("Player"))
         {
             if (!isPlayed || (sounds[0].Repeat && repeatCounter < sounds[0].repeatTimes))
@@ -66,6 +66,7 @@ public class SoundManager : MonoBehaviour
                 isPlayed = true;
             }
         }
+        //if we want (just) the player to trigger the sound look for the player 
         if (sounds[0].triggerWithPlayer && other.CompareTag("Player"))
         {
             if (!isPlayed || (sounds[0].Repeat && repeatCounter < sounds[0].repeatTimes))
