@@ -30,16 +30,19 @@ public class RotatingPipe : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (rotatingSound.gameObject.activeInHierarchy)
+        if (rotatingsource != null)
         {
+            if (rotatingSound.gameObject.activeInHierarchy)
+            {
 
-            if (IsRotating() && !rotatingSound.GetMusicIsPlaying())
-            {
-                rotatingSound.SetAndPlayMusic(0);
-            }
-            if (!IsRotating())
-            {
-                rotatingSound.StopMusic();
+                if (IsRotating() && !rotatingSound.GetMusicIsPlaying())
+                {
+                    rotatingSound.SetAndPlayMusic(0);
+                }
+                if (!IsRotating())
+                {
+                    rotatingSound.StopMusic();
+                }
             }
         }
     }
@@ -80,7 +83,12 @@ public class RotatingPipe : MonoBehaviour
             float percent = Mathf.Clamp01(counter / duration);
             float curvePercent = SmoothnessCurve.Evaluate(percent);
             counter += Time.deltaTime;
-            rotatingsource.BaseVolume = 1 - curvePercent;
+
+            if (rotatingsource != null)
+            {
+                rotatingsource.BaseVolume = 1 - curvePercent;
+            }
+
             gameObjectToMove.transform.rotation = Quaternion.LerpUnclamped(currentRot, newRot, curvePercent);
             yield return null;
         }
